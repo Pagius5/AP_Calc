@@ -3,7 +3,7 @@
 ## I. Intro to Calculus
 
 
-!!! abstract "Key Terms"
+!!! abstract "Keywords"
     **Calculus 微积分** • **Analysis 分析** 
 
     **Change** • **Infinity ($\infty$)** • **infinitesimal 无穷小量**
@@ -13,7 +13,7 @@
 ### 1. The Historical Paradox
 Calculus is the mathematical study of **change and infinity**.
 
-!!! info "Etymology"
+??? info "Extension: Etymology"
     Both *calculus* and *calculation* share the same Latin root *calculus* (small pebble), used by Romans for counting. While "calculation" became a general term for arithmetic, "Calculus" was adopted in the 17th century to describe the specific "method of calculation" involving infinitesimals.
     
     Even today, dentists and doctors use "calculus" to refer to stone-like deposits on teeth (dental calculus) or in kidneys (kidney stone or renal calculus) !
@@ -42,7 +42,7 @@ In almost any calculus course, calculus is taught in this sequence:
 
 We study limits first to provide a solid, modern foundation for the brilliant intuitive discoveries made hundreds of years ago.
 
-!!! info "Calculus & Analysis"
+??? info "Extension: Calculus & Analysis"
     * **Calculus** is the **operational** toolset. It focuses on the "how"—the rules, formulas, and techniques used to calculate slopes, areas, and volumes. It is the language of engineers and physicists who need to solve real-world problems.
     
     * **Analysis** is the **theoretical** foundation. It focuses on the "why"—the rigorous proof and logical structure behind Calculus. It investigates the nature of real numbers, the formal definition of limits ($\epsilon$-$\delta$ proofs), and the conditions under which functions behave predictably.
@@ -68,34 +68,37 @@ Calculus is the **foundation of higher mathematics**. It provided humanity with 
 
 ### 4. Don't Give Up, Skeletons. Check Out Some Mind-blowing Videos.
 
-<div align="center">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
   <iframe 
-    width="100%" height="400"
     src="https://www.youtube.com/embed/videoseries?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
     title="3Blue1Brown - Essence of Calculus Playlist" 
-    frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     allowfullscreen>
   </iframe>
 </div>
 
-<div align="center" style="margin: 20px 0;">
+<br>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
   <iframe 
     src="//player.bilibili.com/player.html?bvid=BV1N2dGYxEyf&page=1&high_quality=1&danmaku=0&autoplay=0" 
-    width="100%" 
-    height="450" 
-    frameborder="0" 
-    allowfullscreen="true">
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+    title="3Blue1Brown - Essence of Calculus Playlist" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
   </iframe>
 </div>
 
-<div align="center" style="margin: 20px 0;">
+<br>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
   <iframe 
     src="//player.bilibili.com/player.html?bvid=BV1wc411w7Dr&page=1&high_quality=1&danmaku=0&autoplay=0" 
-    width="100%" 
-    height="500" 
-    frameborder="0" 
-    allowfullscreen="true">
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+    title="3Blue1Brown - Essence of Calculus Playlist" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
   </iframe>
 </div>
 
