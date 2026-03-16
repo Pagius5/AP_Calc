@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#power-rule-practice" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -759,6 +764,25 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#power-rule-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Rule Practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -776,7 +800,79 @@
 
   <h1>2 6</h1>
 
+<style>
+    .quiz-card { background: #ffffff; border: 1px solid #e1e4e8; border-radius: 16px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin: 2rem 0; font-family: sans-serif; }
+    .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #f0f2f5; padding-bottom: 15px; }
+    .quiz-title { font-size: 1.4rem; font-weight: 700; color: #1a73e8; margin: 0; }
+    #problem-display { background: #f8f9fa; border-radius: 12px; padding: 40px; text-align: center; font-size: 1.8rem; color: #202124; margin-bottom: 25px; }
+    .input-group { display: flex; gap: 12px; }
+    .quiz-input { flex: 1; padding: 14px 20px; border: 2px solid #dadce0; border-radius: 10px; font-size: 1.1rem; }
+    .btn { padding: 12px 24px; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; }
+    .btn-primary { background: #1a73e8; color: white; }
+    .btn-secondary { background: #f1f3f4; color: #3c4043; }
+    .feedback-msg { margin-top: 20px; padding: 15px; border-radius: 8px; font-weight: 500; }
+</style>
 
+<div class="quiz-card">
+<div class="quiz-header">
+<h3 id="power-rule-practice">Power Rule Practice</h3>
+<p><span class="quiz-badge" style="background: #e8f0fe; color: #1a73e8; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;">Level: Calculus AB</span></p>
+</div>
+<div id="problem-display">
+    <span class="arithmatex">\( f(x) = 5x^3 \implies f'(x) = ? \)</span>
+</div>
+<div class="input-group">
+    <input type="text" id="ans-input" class="quiz-input" placeholder="e.g., 15x^2">
+    <button onclick="checkAns()" class="btn btn-primary">Submit</button>
+    <button onclick="refreshProb()" class="btn btn-secondary">Next</button>
+</div>
+<div id="feedback-area"></div>
+</div>
+<script>
+let currentSolution = "15x^2"; // 初始题目答案
+
+function refreshProb() {
+    const display = document.getElementById('problem-display');
+    const feedback = document.getElementById('feedback-area');
+    const input = document.getElementById('ans-input');
+
+    feedback.style.display = 'none';
+    input.value = "";
+
+    const a = Math.floor(Math.random() * 8) + 3; 
+    const n = Math.floor(Math.random() * 4) + 2; 
+    currentSolution = (a * n) + "x^" + (n - 1);
+
+    display.innerHTML = '<span class="arithmatex">\\( f(x) = ' + a + 'x^{' + n + '} \\implies f\'(x) = ? \\)</span>';
+
+    if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([display]);
+    }
+}
+
+function checkAns() {
+    const input = document.getElementById('ans-input');
+    const val = input.value.replace(/\s+/g, '').toLowerCase();
+    const feedback = document.getElementById('feedback-area');
+
+    feedback.style.display = 'block';
+    if (val === currentSolution.toLowerCase()) {
+        feedback.className = "feedback-msg";
+        feedback.style.background = "#e6f4ea";
+        feedback.style.color = "#137333";
+        feedback.innerHTML = "🎉 <b>Correct!</b>";
+    } else {
+        feedback.className = "feedback-msg";
+        feedback.style.background = "#fce8e6";
+        feedback.style.color = "#c5221f";
+        feedback.innerHTML = "❌ <b>Try again!</b> Target: <span class='arithmatex'>\\( " + currentSolution + " \\)</span>";
+    }
+
+    if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([feedback]);
+    }
+}
+</script>
 
 
 
@@ -838,6 +934,8 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.js"></script>
       
     
   </body>

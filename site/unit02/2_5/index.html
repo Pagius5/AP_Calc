@@ -19,7 +19,7 @@
     
     
       
-        <title>2 5 - AP Calculus Notes</title>
+        <title>hi - AP Calculus Notes</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#hi" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -103,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2 5
+              hi
             
           </span>
         </div>
@@ -758,6 +763,27 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-differentiation-and-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Section 1: Differentiation and Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -774,9 +800,265 @@
 
 
 
-  <h1>2 5</h1>
+<h1 id="hi">hi</h1>
+<p>什么是 
+    <span class="arithmatex">\( f(x) = x^2 \)</span> 
+的导数？
+</p>
 
+<div>
+<p>这是一个 HTML 块内部的公式：<span class="arithmatex">\(f'(x) = 2x\)</span></p>
+</div>
+<div class="quiz-container" style="border: 1px solid #eee; padding: 20px; border-radius: 10px; background: #fff; margin: 20px 0;">
+    <h3 style="color: #007bff; margin-top: 0;">Unit 1: Basic Derivatives</h3>
 
+    <div class="question-block" style="margin-bottom: 25px;">
+        <p><strong>1. 计算下述函数的导数：</strong> 
+            <span class="arithmatex">\( f(x) = 4x^3 - 5x + 1 \)</span>
+        </p>
+
+        <div style="margin-left: 15px;">
+            <label style="display: block; margin: 10px 0; cursor: pointer;">
+                <input type="radio" name="q1" value="A"> A. <span class="arithmatex">\( 12x^2 - 5 \)</span>
+            </label>
+            <label style="display: block; margin: 10px 0; cursor: pointer;">
+                <input type="radio" name="q1" value="B"> B. <span class="arithmatex">\( 12x^3 - 5 \)</span>
+            </label>
+            <label style="display: block; margin: 10px 0; cursor: pointer;">
+                <input type="radio" name="q1" value="C"> C. <span class="arithmatex">\( 4x^2 - 5 \)</span>
+            </label>
+        </div>
+    </div>
+
+    <button onclick="checkCalculus()" style="background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+        Submit Answer
+    </button>
+
+    <div id="quiz-result" style="margin-top: 20px; padding: 10px; border-radius: 5px; display: none;"></div>
+</div>
+
+<script>
+function checkCalculus() {
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    const resultDiv = document.getElementById('quiz-result');
+
+    if (!q1) {
+        alert("请选择一个答案！");
+        return;
+    }
+
+    resultDiv.style.display = "block";
+    if (q1.value === "A") {
+        resultDiv.style.background = "#d4edda";
+        resultDiv.style.color = "#155724";
+        resultDiv.innerHTML = "✅ <b>Correct!</b> 根据 Power Rule，导数确实是 \( 12x^2 - 5 \)。";
+    } else {
+        resultDiv.style.background = "#f8d7da";
+        resultDiv.style.color = "#721c24";
+        resultDiv.innerHTML = "❌ <b>Incorrect.</b> 请再检查一下指数下落后的系数计算。";
+    }
+
+    // 这一步是保险：手动让 MathJax 扫一遍动态生成的反馈信息
+    if (window.MathJax && window.MathJax.typeset) {
+        window.MathJax.typeset([resultDiv]);
+    }
+}
+</script>
+
+<div class="quiz-box" style="border: 2px solid #3f51b5; padding: 20px; border-radius: 12px; background: #fff;">
+    <p><strong>2. 挑战题：</strong> 求函数 <span class="arithmatex">\( g(x) = e^x \cdot \sin(x) \)</span> 的导数 <span class="arithmatex">\( g'(x) \)</span></p>
+
+    <div style="margin-left: 20px;">
+        <label style="display: block; margin: 12px 0; cursor: pointer;">
+            <input type="radio" name="q2" value="wrong"> A. <span class="arithmatex">\( e^x \cos(x) \)</span>
+        </label>
+        <label style="display: block; margin: 12px 0; cursor: pointer;">
+            <input type="radio" name="q2" value="correct"> B. <span class="arithmatex">\( e^x(\sin(x) + \cos(x)) \)</span>
+        </label>
+        <label style="display: block; margin: 12px 0; cursor: pointer;">
+            <input type="radio" name="q2" value="wrong"> C. <span class="arithmatex">\( e^x + \cos(x) \)</span>
+        </label>
+    </div>
+
+    <button onclick="checkQ2()" style="margin-top: 10px; background: #3f51b5; color: white; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer;">Check Answer</button>
+    <div id="res2" style="margin-top: 15px; padding: 10px; border-radius: 6px; display: none;"></div>
+</div>
+
+<script>
+function checkQ2() {
+    const q2 = document.querySelector('input[name="q2"]:checked');
+    const res = document.getElementById('res2');
+    res.style.display = "block";
+    if (q2 && q2.value === "correct") {
+        res.innerHTML = "✅ <b>太棒了！</b> 你正确使用了乘法法则 (Product Rule): <span class='arithmatex'>\\( (uv)' = u'v + uv' \\)</span>";
+        res.style.background = "#e8f5e9";
+    } else {
+        res.innerHTML = "❌ <b>再想想：</b> 这是一个乘积形式，需要用到 Product Rule 噢。";
+        res.style.background = "#ffebee";
+    }
+    if (window.MathJax?.typeset) MathJax.typeset([res]);
+}
+</script>
+
+<div class="quiz-container" style="border: 1px solid #e0e6ed; padding: 25px; border-radius: 15px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+<h3 id="section-1-differentiation-and-integration">📝 Section 1: Differentiation and Integration</h3>
+<div class="q-block" style="margin-bottom: 30px;">
+    <p><strong>1. 求函数 <span class="arithmatex">\( f(x) = \sin(x^2) \)</span> 的导数 <span class="arithmatex">\( f'(x) \)</span>：</strong></p>
+    <div style="margin-left: 20px;">
+        <label style="display: block; margin: 10px 0; cursor: pointer;">
+            <input type="radio" name="ap1" value="W"> A. <span class="arithmatex">\( \cos(x^2) \)</span>
+        </label>
+        <label style="display: block; margin: 10px 0; cursor: pointer;">
+            <input type="radio" name="ap1" value="C"> B. <span class="arithmatex">\( 2x \cos(x^2) \)</span>
+        </label>
+        <label style="display: block; margin: 10px 0; cursor: pointer;">
+            <input type="radio" name="ap1" value="W"> C. <span class="arithmatex">\( -2x \cos(x^2) \)</span>
+        </label>
+    </div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee;">
+
+<div class="q-block" style="margin-bottom: 30px;">
+    <p><strong>2. 若 <span class="arithmatex">\( F(x) = \int_{0}^{x} \sqrt{t^2 + 9} \, dt \)</span>，求 <span class="arithmatex">\( F'(4) \)</span> 的值：</strong></p>
+    <div style="margin-left: 20px;">
+        <label style="display: block; margin: 10px 0; cursor: pointer;">
+            <input type="radio" name="ap2" value="W"> A. <span class="arithmatex">\( 3 \)</span>
+        </label>
+        <label style="display: block; margin: 10px 0; cursor: pointer;">
+            <input type="radio" name="ap2" value="C"> B. <span class="arithmatex">\( 5 \)</span>
+        </label>
+        <label style="display: block; margin: 10px 0; cursor: pointer;">
+            <input type="radio" name="ap2" value="W"> C. <span class="arithmatex">\( \frac{4}{5} \)</span>
+        </label>
+    </div>
+</div>
+
+<hr style="border: 0; border-top: 1px solid #eee;">
+
+<div class="q-block" style="margin-bottom: 30px;">
+    <p><strong>3. 已知方程 <span class="arithmatex">\( x^2 + y^2 = 25 \)</span>，在点 <span class="arithmatex">\( (3, 4) \)</span> 处的斜率 <span class="arithmatex">\( \frac{dy}{dx} \)</span> 是：</strong></p>
+    <div style="margin-left: 20px;">
+        <label style="display: block; margin: 10px 0; cursor: pointer;">
+            <input type="radio" name="ap3" value="C"> A. <span class="arithmatex">\( -\frac{3}{4} \)</span>
+        </label>
+        <label style="display: block; margin: 10px 0; cursor: pointer;">
+            <input type="radio" name="ap3" value="W"> B. <span class="arithmatex">\( \frac{3}{4} \)</span>
+        </label>
+        <label style="display: block; margin: 10px 0; cursor: pointer;">
+            <input type="radio" name="ap3" value="W"> C. <span class="arithmatex">\( -\frac{4}{3} \)</span>
+        </label>
+    </div>
+</div>
+
+<p><button onclick="evaluateAPQuiz()" style="background: #1a73e8; color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-size: 16px; transition: 0.3s;">
+    提交自测结果
+</button></p>
+<div id="ap-feedback" style="margin-top: 25px; padding: 20px; border-radius: 10px; display: none; line-height: 1.6;">
+</div>
+
+</div>
+<script>
+function evaluateAPQuiz() {
+    const feedback = document.getElementById('ap-feedback');
+    const questions = ['ap1', 'ap2', 'ap3'];
+    let score = 0;
+    let details = "";
+
+    questions.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === "C") {
+            score++;
+        }
+    });
+
+    feedback.style.display = "block";
+    if (score === 3) {
+        feedback.style.background = "#e6f4ea";
+        feedback.style.color = "#137333";
+        feedback.innerHTML = "🎯 <b>太出色了！</b> 3/3 全部正确。你对 Chain Rule 和 FTC 的掌握非常扎实。";
+    } else {
+        feedback.style.background = "#feefee";
+        feedback.style.color = "#d93025";
+        feedback.innerHTML = `📊 <b>继续努力！</b> 你的得分是 ${score}/3。<br><small>提示：第3题记得隐函数求导公式为 <span class="arithmatex">\\( 2x + 2y \\frac{dy}{dx} = 0 \\)</span>。</small>`;
+    }
+
+    if (window.MathJax?.typeset) {
+        window.MathJax.typeset([feedback]);
+    }
+}
+</script>
+
+<div class="random-quiz-container" style="border: 2px dashed #4CAF50; padding: 25px; border-radius: 15px; background: #f9fff9; margin: 20px 0;">
+    <h3 style="color: #2e7d32; margin-top: 0;">🎲 随机 Power Rule 挑战</h3>
+    <p>点击按钮生成一道新的求导题：</p>
+
+    <div id="problem-area" style="font-size: 1.2em; margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border: 1px solid #c8e6c9; min-height: 40px;">
+        点击下方按钮开始...
+    </div>
+
+    <div style="display: flex; gap: 10px; align-items: center;">
+        <input type="text" id="user-ans" placeholder="输入导数结果 (如 6x^2)" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; flex-grow: 1;">
+        <button onclick="checkRandomAns()" style="padding: 10px 20px; background: #2e7d32; color: white; border: none; border-radius: 4px; cursor: pointer;">检查</button>
+        <button onclick="generateProblem()" style="padding: 10px 20px; background: #81c784; color: white; border: none; border-radius: 4px; cursor: pointer;">换一题</button>
+    </div>
+
+    <div id="random-feedback" style="margin-top: 15px; font-weight: bold; min-height: 20px;"></div>
+</div>
+
+<script>
+let currentAns = ""; // 存储当前题目正确答案的简化字符串
+
+function generateProblem() {
+    const feedback = document.getElementById('random-feedback');
+    const problemArea = document.getElementById('problem-area');
+    const input = document.getElementById('user-ans');
+
+    feedback.innerText = "";
+    input.value = "";
+
+    // 随机生成系数 a 和指数 n: f(x) = ax^n
+    const a = Math.floor(Math.random() * 9) + 2; // 2-10
+    const n = Math.floor(Math.random() * 5) + 2; // 2-6
+
+    // 计算正确答案
+    const coeff = a * n;
+    const power = n - 1;
+    currentAns = `${coeff}x^${power}`;
+
+    // 使用你验证成功的 arithmatex 结构渲染题目
+    problemArea.innerHTML = `求导：<span class="arithmatex">\\( f(x) = ${a}x^{${n}} \\)</span>`;
+
+    // 立即触发 MathJax 渲染新生成的公式
+    if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([problemArea]);
+    }
+}
+
+function checkRandomAns() {
+    const userVal = document.getElementById('user-ans').value.replace(/\s+/g, '').toLowerCase();
+    const feedback = document.getElementById('random-feedback');
+
+    // 简单的字符串比对（你可以根据需要升级为正则或更复杂的逻辑）
+    const formattedAns = currentAns.toLowerCase();
+
+    if (userVal === formattedAns) {
+        feedback.innerHTML = "✅ 太棒了！正确答案正是 <span class='arithmatex'>\\( " + currentAns + " \\)</span>";
+        feedback.style.color = "#2e7d32";
+    } else {
+        feedback.innerHTML = "❌ 不太对，再算算看？提示：系数相乘，指数减一。";
+        feedback.style.color = "#d32f2f";
+    }
+
+    if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([feedback]);
+    }
+}
+
+// 页面加载时自动生成第一题
+window.addEventListener('load', () => {
+    setTimeout(generateProblem, 500);
+});
+</script>
 
 
 
@@ -838,6 +1120,8 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.js"></script>
       
     
   </body>
