@@ -1,9 +1,13 @@
 site_name: AP Calculus Notes
 
+repo_url: https://github.com/Pagius5/AP_Calc
+repo_name: Pagius5/AP Calc
+
 theme:
   name: material
   icon:
     logo: material/math-integral
+    repo: fontawesome/brands/github
   favicon: assets/images/favicon.png
   palette:
     # 浅色模式
@@ -45,6 +49,7 @@ extra_javascript:
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css
+  - stylesheets/extra.css
 
 validation:
   nav:
