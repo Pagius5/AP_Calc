@@ -1,10 +1,10 @@
 // mcq.js
-(function() {
+(function () {
     if (!document.getElementById('mcq-styles')) {
         const style = document.createElement('style');
         style.id = 'mcq-styles';
         style.innerHTML = `
-            .quiz-card { background: #ffffff; border: 1px solid #e1e4e8; border-radius: 16px; padding: 8px 30px 30px 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin: 2rem 0; font-family: sans-serif; }
+            .quiz-card { background: #ffffff; border: 1px solid #e1e4e8; border-radius: 16px; padding: 8px 30px 30px 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin: 2rem 0; font-family: inherit; }
             .quiz-title-box { border-bottom: 2px solid #f0f2f5; margin-bottom: 20px; padding-bottom: 10px; }
             .quiz-title { font-size: 1.2rem; font-weight: 700; color: #1a73e8; margin: 0; }
             .option-label { display: block; margin: 15px 0; cursor: pointer; padding: 12px; border: 1px solid #f0f2f5; border-radius: 8px; transition: background 0.2s; }
@@ -16,7 +16,7 @@
         document.head.appendChild(style);
     }
 
-    window.renderMCQ = function(containerId, config) {
+    window.renderMCQ = function (containerId, config) {
         const container = document.getElementById(containerId);
         if (!container) return;
 
@@ -42,7 +42,7 @@
 
         // 绑定点击事件 (避开 onclick 字符串转义问题)
         const btn = document.getElementById(`${containerId}-btn`);
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             const selected = container.querySelector(`input[name="${containerId}-input"]:checked`);
             const res = document.getElementById(`${containerId}-res`);
 
