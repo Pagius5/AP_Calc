@@ -830,107 +830,10 @@
 
 
 <h1 id="25-power-rule">2.5 Power Rule</h1>
-<style>
-    .quiz-card { background: #ffffff; border: 1px solid #e1e4e8; border-radius: 16px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin: 2rem 0; font-family: sans-serif; }
-    .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #f0f2f5; padding-bottom: 15px; }
-    .quiz-title { font-size: 1.4rem; font-weight: 700; color: #1a73e8; margin: 0; }
-    #problem-display { background: #f8f9fa; border-radius: 12px; padding: 40px; text-align: center; font-size: 1.8rem; color: #202124; margin-bottom: 25px; }
-    .input-group { display: flex; gap: 12px; }
-    .quiz-input { flex: 1; padding: 14px 20px; border: 2px solid #dadce0; border-radius: 10px; font-size: 1.1rem; }
-    .btn { padding: 12px 24px; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; }
-    .btn-primary { background: #1a73e8; color: white; }
-    .btn-secondary { background: #f1f3f4; color: #3c4043; }
-    .feedback-msg { margin-top: 20px; padding: 15px; border-radius: 8px; font-weight: 500; }
-</style>
-
 <h3 id="power-rule-quiz">Power Rule Quiz</h3>
-<div class="quiz-card">
-<!-- <div class="quiz-header" markdown="1"> -->
-<!-- <span class="quiz-badge" style="background: #e8f0fe; color: #1a73e8; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;">Level: Calculus AB</span> -->
-<!-- </div> -->
-<div id="problem-display">
-    <span class="arithmatex">\( f(x) = 5x^3 \implies f'(x) = ? \)</span>
-</div>
-<div class="input-group">
-    <input type="text" id="ans-input" class="quiz-input" placeholder="e.g., 15x^2">
-    <button onclick="checkAns()" class="btn btn-primary">Submit</button>
-    <button onclick="refreshProb()" class="btn btn-secondary">Next</button>
-</div>
-<div id="feedback-area"></div>
-</div>
-<!-- <script>
-
-let currentSolution = ""; 
-
-function refreshProb() {
-    const display = document.getElementById('problem-display');
-    const feedback = document.getElementById('feedback-area');
-    const input = document.getElementById('ans-input');
-
-    feedback.style.display = 'none';
-    input.value = "";
-
-    // 随机生成系数 a 和幂次 n
-    const a = Math.floor(Math.random() * 8) + 3; 
-    const n = Math.floor(Math.random() * 4) + 2; 
-
-    // --- 核心逻辑修改：动态生成标准答案字符串 ---
-    let coef = a * n;
-    let power = n - 1;
-
-    if (power === 0) {
-        currentSolution = coef.toString(); // 常数项
-    } else if (power === 1) {
-        currentSolution = coef + "x";      // 隐藏 ^1
-    } else {
-        currentSolution = coef + "x^" + power;
-    }
-    // ----------------------------------------
-
-    display.innerHTML = '<span class="arithmatex">\\( f(x) = ' + a + 'x^{' + n + '} \\implies f\'(x) = ? \\)</span>';
-
-    if (window.MathJax && window.MathJax.typesetPromise) {
-        window.MathJax.typesetPromise([display]);
-    }
-}
-
-function checkAns() {
-    const input = document.getElementById('ans-input');
-    // 移除所有空格，转小写，并统一将可能输入的 "x^1" 替换为 "x" 进行模糊匹配
-    const val = input.value.replace(/\s+/g, '').toLowerCase().replace(/x\^1$/, 'x');
-    const feedback = document.getElementById('feedback-area');
-
-    feedback.style.display = 'block';
-
-    // 同时也对标准答案进行一次安全清理比较
-    if (val === currentSolution.toLowerCase()) {
-        feedback.className = "feedback-msg";
-        feedback.style.background = "#e6f4ea";
-        feedback.style.color = "#137333";
-        feedback.innerHTML = "🎉 <b>Correct!</b>";
-    } else {
-        feedback.className = "feedback-msg";
-        feedback.style.background = "#fce8e6";
-        feedback.style.color = "#c5221f";
-        feedback.innerHTML = "❌ <b>Try again!</b> Target: <span class='arithmatex'>\\( " + currentSolution + " \\)</span>";
-    }
-
-    if (window.MathJax && window.MathJax.typesetPromise) {
-        window.MathJax.typesetPromise([feedback]);
-    }
-}
-</script> -->
+<div id="quiz-container"></div>
 
 <script src="/javascripts/power_rule_quiz.js"></script>
-
-<!-- <script>
-  // 确保在页面加载后初始化第一道题
-  document.addEventListener("DOMContentLoaded", function() {
-      if (typeof refreshProb === "function") {
-          refreshProb();
-      }
-  });
-</script> -->
 
 
 
@@ -987,13 +890,9 @@ function checkAns() {
       
         <script src="../../javascripts/mathjax.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.id/features=es6"></script>
-      
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.js"></script>
       
     
   </body>
