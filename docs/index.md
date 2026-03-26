@@ -30,9 +30,19 @@ In the history of mathematics, calculus developed in this sequence:
 **Integral 积分 → Differentiation 微分 → Limit 极限**.
 
 * **Ancient Times (Integration):** As early as Archimedes, mathematicians used the "Method of Exhaustion" to calculate the area of circles—this was the birth of **Integration**.
+
+<div id="jxgbox-circle-area" class="jxgbox" style="width:100%; height:430px; border-radius: 8px;"></div>
+<script src="/javascripts/circle_area.js"></script>
+<p style="text-align: right; font-size: 0.8em; margin-top: 10px;"><i>Interactive graph credit: <a href="https://jsxgraph.uni-bayreuth.de/share/example/approximation-of-the-circle-area" target="_blank">JSXGraph</a></i></p>
+
 * **17th Century (Differentiation):** Newton and Leibniz developed **Differentiation** to solve problems of instantaneous velocity and tangents. They discovered the **Fundamental Theorem of Calculus**, proving that integration and differentiation are inverse operations:
-    $\int_a^b f(x)dx = F(b) - F(a)$
+
+    $$\int_a^b f(x)dx = F(b) - F(a)$$
+
 * **19th Century (Limits):** Early calculus was plagued by logical inconsistencies (dubbed "the ghosts of departed quantities"). It wasn't until later that Cauchy and others developed the rigorous **Limit** theory we study today.
+
+<iframe src="https://www.geogebra.org/material/iframe/id/mj2bXA5y" loading="lazy" width="100%" height="500px" style="border: 1px solid #e4e4e4; border-radius: 8px;" allowfullscreen></iframe>
+<p style="text-align: right; font-size: 0.8em; margin-top: 10px;"><i>Interactive graph credit: <a href="https://www.geogebra.org/m/mj2bXA5y" target="_blank">GeoGebra</a></i></p>
 
 In almost any calculus course, calculus is taught in this sequence: 
 
@@ -71,6 +81,7 @@ Calculus is the **foundation of higher mathematics**. It provided humanity with 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
   <iframe 
     src="https://www.youtube.com/embed/videoseries?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" 
+    loading="lazy"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
     title="3Blue1Brown - Essence of Calculus Playlist" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -83,6 +94,7 @@ Calculus is the **foundation of higher mathematics**. It provided humanity with 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
   <iframe 
     src="//player.bilibili.com/player.html?bvid=BV1N2dGYxEyf&page=1&high_quality=1&danmaku=0&autoplay=0" 
+    loading="lazy"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
     title="3Blue1Brown - Essence of Calculus Playlist" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -95,6 +107,7 @@ Calculus is the **foundation of higher mathematics**. It provided humanity with 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
   <iframe 
     src="//player.bilibili.com/player.html?bvid=BV1wc411w7Dr&page=1&high_quality=1&danmaku=0&autoplay=0" 
+    loading="lazy"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
     title="3Blue1Brown - Essence of Calculus Playlist" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
