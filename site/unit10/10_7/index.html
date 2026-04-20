@@ -792,6 +792,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-alternating-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is an Alternating Series?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-alternating-series-test-ast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Alternating Series Test (AST)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-alternating-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizing Alternating Convergence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-distinctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Distinctions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -811,18 +874,114 @@
 
 
 <h1 id="107-alternating-series-test-for-convergence">10.7 Alternating Series Test for Convergence</h1>
-<div class="admonition tip">
-<p class="admonition-title">Definition: Alternating Series Test</p>
-<p>For a series <span class="arithmatex">\(\sum (-1)^n a_n\)</span> (where <span class="arithmatex">\(a_n &gt; 0\)</span>), the series <strong>converges</strong> if:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Alternating Series 交错级数</strong> • <strong>Alternating Series Test (AST) 交错级数判别法</strong> </p>
+<p><strong>Decreasing Magnitude 递减幅值</strong> • <strong>Conditional Convergence 条件收敛</strong></p>
+</div>
+<h2 id="what-is-an-alternating-series">What is an Alternating Series?</h2>
+<p>An alternating series is a series whose terms alternate between positive and negative signs. It typically takes one of these two forms:</p>
+<div class="arithmatex">\[ \sum_{n=1}^{\infty} (-1)^n a_n \quad \text{or} \quad \sum_{n=1}^{\infty} (-1)^{n+1} a_n \]</div>
+<p>where <span class="arithmatex">\(a_n &gt; 0\)</span> for all <span class="arithmatex">\(n\)</span>.</p>
+<hr />
+<h2 id="the-alternating-series-test-ast">The Alternating Series Test (AST)</h2>
+<p>The AST is a relatively "easy" test because it only requires two conditions to be met for the series to converge.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：The Alternating Series Test (LIM-7.A.10)</p>
+<p>An alternating series <span class="arithmatex">\(\sum (-1)^n a_n\)</span> <strong>converges</strong> if it satisfies the following two conditions:</p>
 <ol>
 <li>
-<p><span class="arithmatex">\(\lim_{n \to \infty} a_n = 0\)</span></p>
+<p><strong>Decreasing Magnitude:</strong> The terms (ignoring the sign) must be non-increasing. That is, <span class="arithmatex">\(a_{n+1} \le a_n\)</span> for all <span class="arithmatex">\(n\)</span> beyond some point.</p>
 </li>
 <li>
-<p><span class="arithmatex">\(a_{n+1} \le a_n\)</span> (The terms are non-increasing in magnitude).</p>
+<p><strong>Limit is Zero:</strong> The limit of the terms must be zero: <span class="arithmatex">\(\lim\limits_{n \to \infty} a_n = 0\)</span>.</p>
 </li>
 </ol>
 </div>
+<p>If both conditions are met, the series is guaranteed to converge.</p>
+<hr />
+<h2 id="visualizing-alternating-convergence">Visualizing Alternating Convergence</h2>
+<p>In an alternating series, the partial sums <span class="arithmatex">\(S_n\)</span> "bounce" back and forth. However, if the terms are getting smaller and heading toward zero, the "bounce" becomes smaller and smaller, eventually trapping the sum at a single finite value.</p>
+<div id="box_ast_viz" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_ast_viz', {
+      boundingbox: [-1, 1.2, 10, -0.2],
+      functions: [
+          {expr: '0.693', domain: [-1, 15], color: '#d62728'} // The limit S = ln(2)
+      ],
+      points: [
+          [1, 1, true],         // S1 = 1
+          [2, 0.5, true],       // S2 = 1 - 0.5 = 0.5
+          [3, 0.833, true],     // S3 = 0.5 + 0.33 = 0.833
+          [4, 0.583, true],     // S4 = 0.833 - 0.25 = 0.583
+          [5, 0.783, true],     // S5 = 0.583 + 0.2 = 0.783
+          [6, 0.616, true]      // S6 = 0.783 - 0.167 = 0.616
+      ]
+  });
+</script>
+
+<p>The points above represent the partial sums of the <strong>Alternating Harmonic Series</strong> <span class="arithmatex">\(\sum \frac{(-1)^{n+1}}{n}\)</span>. Notice how they "squeeze" toward the limit (red line).</p>
+<hr />
+<h2 id="important-distinctions">Important Distinctions</h2>
+<ol>
+<li>
+<p><strong>Failure of Condition 2:</strong> If <span class="arithmatex">\(\lim\limits_{n \to \infty} a_n \neq 0\)</span>, the series <strong>diverges</strong> by the <strong>nth Term Test</strong>. </p>
+</li>
+<li>
+<p><strong>Failure of Condition 1:</strong> If the terms don't decrease, the series might still diverge or oscillate, and the AST cannot be used to prove convergence.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Extension: Absolute vs. Conditional Convergence</p>
+<p>The Alternating Harmonic Series <span class="arithmatex">\(\sum \frac{(-1)^{n+1}}{n}\)</span> is a special case. </p>
+<ul>
+<li>The series itself <strong>converges</strong> (by AST).</li>
+<li>If you take the absolute value of the terms, you get the Harmonic Series <span class="arithmatex">\(\sum \frac{1}{n}\)</span>, which <strong>diverges</strong>.</li>
+</ul>
+<p>When a series converges as an alternating series but diverges when all terms are made positive, we call it <strong>Conditionally Convergent</strong>. If it converges even with absolute values, it is <strong>Absolutely Convergent</strong>.</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
+
+<div id="quiz10-7-1"></div>
+<script>
+  renderMCQ('quiz10-7-1', {
+    title: 'Testing AST Conditions',
+    question: 'Consider the series <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} (-1)^n \\frac{n+1}{n} \\)</span>. Does this series converge by the AST?',
+    options: [
+      'A. Yes, because it is alternating.',
+      'B. Yes, because the terms are decreasing.',
+      'C. No, because the limit of the terms is not zero.',
+      'D. No, because the terms are not decreasing.'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! <span class='arithmatex'>\\( \\lim\\limits_{n \\to \\infty} \\frac{n+1}{n} = 1 \\)</span>. Since the limit of the terms is not zero, the series fails the second condition of the AST and actually diverges by the nth Term Test.",
+      wrong: "Check the limit of the terms (ignoring the negative signs) as n goes to infinity. What must that limit be for the AST to guarantee convergence?"
+    }
+  });
+</script>
+
+<div id="quiz10-7-2"></div>
+<script>
+  renderMCQ('quiz10-7-2', {
+    title: 'Conditional Convergence',
+    question: 'The series <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{(-1)^n}{\\sqrt{n}} \\)</span> is:',
+    options: [
+      'A. Absolutely Convergent',
+      'B. Conditionally Convergent',
+      'C. Divergent',
+      'D. Oscillating without a limit'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! The series converges by AST (terms go to 0 and decrease). However, the absolute value version is <span class='arithmatex'>\\( \\sum 1/\\sqrt{n} \\)</span>, which is a p-series with <span class='arithmatex'>\\( p=0.5 \\)</span>, which diverges. Therefore, it is conditionally convergent.",
+      wrong: "First, use AST: does it converge? Second, check the p-series with absolute values (1/n^0.5): does that converge?"
+    }
+  });
+</script>
 
 
 

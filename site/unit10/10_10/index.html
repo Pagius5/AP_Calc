@@ -19,7 +19,7 @@
     
     
       
-        <title>10.10 Taylor Series and Lagrange Error Bound - AP Calculus Notes</title>
+        <title>10.10 Alternating Series Error Bound - AP Calculus Notes</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1010-taylor-series-and-lagrange-error-bound" class="md-skip">
+        <a href="#1010-alternating-series-error-bound" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10.10 Taylor Series and Lagrange Error Bound
+              10.10 Alternating Series Error Bound
             
           </span>
         </div>
@@ -799,102 +799,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#i-concept" class="md-nav__link">
+  <a href="#estimating-the-sum" class="md-nav__link">
     <span class="md-ellipsis">
       
-        I. Concept
+        Estimating the Sum
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="I. Concept">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-the-taylor-series-formula" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. The Taylor Series Formula
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-essential-maclaurin-series-to-memorize" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Essential Maclaurin Series to Memorize
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-lagrange-error-bound-the-hard-part" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Lagrange Error Bound (The Hard Part)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-problem-solving-strategy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Problem Solving Strategy
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ii-practice" class="md-nav__link">
+  <a href="#the-error-bound-theorem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        II. Practice
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="II. Practice">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-basic-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🟢 例题 1：基础计算题 (Basic Calculation)
+        The Error Bound Theorem
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2ap-frq-style" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-the-error" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔴 例题 2：AP 考试真题风格 (FRQ Style)
+        Visualizing the Error
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#example-finding-the-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Finding the Error
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
   
 </li>
       
@@ -918,130 +873,110 @@
   
 
 
-<h1 id="1010-taylor-series-and-lagrange-error-bound">10.10 Taylor Series and Lagrange Error Bound</h1>
-<h2 id="i-concept">I. Concept</h2>
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/3d6DsjIBzJ4" title="Taylor series | Chapter 11, Essence of calculus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<h3 id="1-the-taylor-series-formula">1. The Taylor Series Formula</h3>
-<p>The Taylor series for a function <span class="arithmatex">\(f(x)\)</span> centered at <span class="arithmatex">\(x = a\)</span> is defined as:</p>
-<div class="arithmatex">\[f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \dots = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n\]</div>
-<p>Maclaurin Series is a Taylor series centered at <span class="arithmatex">\(a=0\)</span>:</p>
-<div class="arithmatex">\[f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 + \dots = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n\]</div>
+<h1 id="1010-alternating-series-error-bound">10.10 Alternating Series Error Bound</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Alternating Series Error Bound 交错级数误差项</strong> • <strong>Remainder (Error) 余项/误差</strong> </p>
+<p><strong>Partial Sum 部分和</strong> • <strong>Truncation Error 截断误差</strong></p>
+</div>
+<h2 id="estimating-the-sum">Estimating the Sum</h2>
+<p>When we calculate a limit or a sum, we often use a <strong>partial sum</strong> (<span class="arithmatex">\(S_n\)</span>) as an approximation. The difference between the actual infinite sum (<span class="arithmatex">\(S\)</span>) and our approximation is called the <strong>Remainder</strong> (<span class="arithmatex">\(R_n\)</span>), or simply the <strong>Error</strong>.</p>
+<div class="arithmatex">\[ \text{Error} = |R_n| = |S - S_n| \]</div>
+<hr />
+<h2 id="the-error-bound-theorem">The Error Bound Theorem</h2>
+<p>For alternating series, the error is always "trapped" by the next term in the sequence.</p>
 <div class="admonition info">
-<p class="admonition-title">Why the separate name?</p>
-<p>While it might seem redundant to have two names for the same concept, the distinction exists for historical and practical reasons:</p>
-<ul>
-<li><strong>The "Special Case" Logic</strong>: A <strong>Maclaurin Series</strong> is simply a <strong>Taylor Series</strong> centered at <span class="arithmatex">\(a = 0\)</span>. In mathematics, the most frequently used "special case" often earns its own name to simplify communication.</li>
-<li><strong>Historical Influence</strong>: Although <strong>Brook Taylor</strong> published the general version in 1715, <strong>Colin Maclaurin</strong> wrote the most influential calculus textbook of the 18th century (<em>Treatise of Fluxions</em>). He used the <span class="arithmatex">\(a=0\)</span> case so effectively that the mathematical community began associating that specific form with him.</li>
-<li><strong>The "Standard" Form</strong>: Most "Common Series" you memorize (<span class="arithmatex">\(\sin x, e^x, \cos x\)</span>) are Maclaurin series. Having a specific name helps students and engineers immediately know the expansion is centered at the origin without needing to specify "<span class="arithmatex">\(a=0\)</span>".</li>
-</ul>
-<p><strong>In short</strong>: Taylor gave us the <strong>tool</strong>, but Maclaurin gave us the <strong>manual</strong> that everyone actually read.</p>
+<p class="admonition-title">核心要点：Alternating Series Error Bound (LIM-7.B.1)</p>
+<p>If an alternating series <span class="arithmatex">\(\sum (-1)^n a_n\)</span> satisfies the conditions of the <strong>Alternating Series Test</strong> (terms are decreasing in magnitude and <span class="arithmatex">\(\lim_{n \to \infty} a_n = 0\)</span>), then:</p>
+<p>The error in using the <span class="arithmatex">\(n\)</span>-th partial sum <span class="arithmatex">\(S_n\)</span> to approximate the total sum <span class="arithmatex">\(S\)</span> is less than or equal to the magnitude of the <strong>first omitted term</strong> (<span class="arithmatex">\(a_{n+1}\)</span>).</p>
+<div class="arithmatex">\[ |S - S_n| \le a_{n+1} \]</div>
 </div>
-<h3 id="2-essential-maclaurin-series-to-memorize">2. Essential Maclaurin Series to Memorize</h3>
-<p>In the BC exam, you must know these by heart:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Function</th>
-<th style="text-align: left;">Maclaurin Series Expansion</th>
-<th style="text-align: left;">General Term</th>
-<th style="text-align: left;"><abbr title="the radius of the largest disk at the center of the series in which the series converges">Radius of Convergence</abbr></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{1-x}\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(1 + x + x^2 + x^3 + \dots\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\sum_{n=0}^{\infty} x^n\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(R=1\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(e^x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\sum_{n=0}^{\infty} \frac{x^n}{n!}\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(R=\infty\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(\sin x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(R=\infty\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(\cos x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \dots\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(R=\infty\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(\arctan x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \dots\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{2n+1}\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(R=1\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(\ln(1+x)\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \dots\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\sum_{n=1}^{\infty} \frac{(-1)^{n-1} x^n}{n}\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(R=1\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\((1+x)^k\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(1 + kx + \frac{k(k-1)}{2!}x^2 + \dots\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\sum_{n=0}^{\infty} \binom{k}{n} x^n\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(R=1\)</span></td>
-</tr>
-</tbody>
-</table>
-<h3 id="3-lagrange-error-bound-the-hard-part">3. Lagrange Error Bound (The Hard Part)</h3>
-<p>When we use a Taylor polynomial of degree <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(P_n(x)\)</span>, to approximate <span class="arithmatex">\(f(x)\)</span>, the remainder (error) <span class="arithmatex">\(R_n(x)\)</span> is:</p>
-<div class="arithmatex">\[|R_n(x)| = |f(x) - P_n(x)| \leq \left| \frac{M}{(n+1)!} (x-c)^{n+1} \right|\]</div>
-<p><strong>Where <span class="arithmatex">\(M\)</span> is:</strong>
-The maximum value of the absolute value of the <span class="arithmatex">\((n+1)^{th}\)</span> derivative of <span class="arithmatex">\(f\)</span> on the interval between <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(x\)</span>:
-$<span class="arithmatex">\(|f^{(n+1)}(z)| \leq M\)</span>$</p>
-<h3 id="4-problem-solving-strategy">4. Problem Solving Strategy</h3>
+<hr />
+<h2 id="visualizing-the-error">Visualizing the Error</h2>
+<p>Think of the partial sums as a sequence of jumps. Because each jump is smaller than the previous one and in the opposite direction, the actual sum <span class="arithmatex">\(S\)</span> is always "trapped" between <span class="arithmatex">\(S_n\)</span> and <span class="arithmatex">\(S_{n+1}\)</span>.</p>
+<div id="box_ast_error" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_ast_error', {
+      boundingbox: [-1, 1.2, 8, -0.2],
+      functions: [
+          {expr: '0.693', domain: [-1, 10], color: '#d62728'} // Actual Sum S
+      ],
+      points: [
+          [1, 1, true],         // S1 (Error = 0.307, next term a2 = 0.5)
+          [2, 0.5, true],       // S2 (Error = 0.193, next term a3 = 0.333)
+          [3, 0.833, true],     // S3 (Error = 0.140, next term a4 = 0.25)
+          [4, 0.583, true],     // S4
+          [5, 0.783, true]
+      ]
+  });
+</script>
+
+<p>In the graph above, notice that the distance from any point (partial sum) to the red line (actual sum) is <strong>always smaller</strong> than the vertical distance to the next point.</p>
+<hr />
+<h2 id="example-finding-the-error">Example: Finding the Error</h2>
+<p>Approximate the sum of <span class="arithmatex">\(\sum\limits_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^2}\)</span> using the first 3 terms and find the error bound.</p>
 <ol>
-<li><strong>Find <span class="arithmatex">\(n\)</span></strong>: Identify the degree of the polynomial used.</li>
-<li><strong>Find <span class="arithmatex">\(f^{(n+1)}(x)\)</span></strong>: Calculate the next derivative.</li>
-<li><strong>Find <span class="arithmatex">\(M\)</span></strong>: Look for the maximum value of that derivative on the given interval.</li>
-<li><strong>Plug into the formula</strong>: Calculate the upper bound of the error.</li>
+<li>
+<p><strong>Partial Sum <span class="arithmatex">\(S_3\)</span>:</strong></p>
+<div class="arithmatex">\[ S_3 = 1 - \frac{1}{4} + \frac{1}{9} = \frac{36 - 9 + 4}{36} = \frac{31}{36} \approx 0.8611 \]</div>
+</li>
+<li>
+<p><strong>First Omitted Term (<span class="arithmatex">\(a_4\)</span>):</strong>
+    The next term in the series (ignoring the sign) is <span class="arithmatex">\(a_4 = \frac{1}{4^2} = \frac{1}{16} = 0.0625\)</span>.</p>
+</li>
+<li>
+<p><strong>Conclusion:</strong>
+    The actual sum <span class="arithmatex">\(S\)</span> is within <span class="arithmatex">\(0.0625\)</span> of <span class="arithmatex">\(0.8611\)</span>. 
+    Mathematically: <span class="arithmatex">\(0.7986 \le S \le 0.9236\)</span>.</p>
+</li>
 </ol>
 <hr />
-<h2 id="ii-practice">II. Practice</h2>
-<h3 id="1-basic-calculation">🟢 例题 1：基础计算题 (Basic Calculation)</h3>
-<p><strong>Question:</strong> The function <span class="arithmatex">\(f\)</span> has a Taylor polynomial of degree <span class="arithmatex">\(n=3\)</span> about <span class="arithmatex">\(x=0\)</span>. If the fourth derivative satisfies <span class="arithmatex">\(|f^{(4)}(x)| \leq 3\)</span> for all <span class="arithmatex">\(x\)</span> in the interval <span class="arithmatex">\([0, 0.2]\)</span>, find the Lagrange error bound for the approximation of <span class="arithmatex">\(f(0.2)\)</span> using <span class="arithmatex">\(P_3(0.2)\)</span>.</p>
-<details class="success">
-<summary>查看解析 (Click to Expand)</summary>
-<ol>
-<li><strong>Identify <span class="arithmatex">\(n\)</span></strong>: <span class="arithmatex">\(n=3\)</span>, so the formula uses <span class="arithmatex">\((n+1) = 4\)</span>.</li>
-<li><strong>Find <span class="arithmatex">\(M\)</span></strong>: Given <span class="arithmatex">\(|f^{(4)}(x)| \leq 3\)</span>, so <span class="arithmatex">\(M = 3\)</span>.</li>
-<li><strong>Find <span class="arithmatex">\((x-c)\)</span></strong>: <span class="arithmatex">\(x=0.2\)</span> and <span class="arithmatex">\(c=0\)</span>, so <span class="arithmatex">\((x-c) = 0.2\)</span>.</li>
-<li><strong>Plug into formula</strong>:
-    $<span class="arithmatex">\(|R_3(0.2)| \leq \frac{3}{4!}(0.2)^4\)</span>$
-    $<span class="arithmatex">\(|R_3(0.2)| \leq \frac{3}{24}(0.0016) = \frac{1}{8}(0.0016) = 0.0002\)</span>$
-<strong>Answer:</strong> The maximum error is <span class="arithmatex">\(0.0002\)</span>.</li>
-</ol>
-</details>
-<hr />
-<h3 id="2ap-frq-style">🔴 例题 2：AP 考试真题风格 (FRQ Style)</h3>
-<p><strong>Question:</strong> A function <span class="arithmatex">\(f\)</span> is approximated by <span class="arithmatex">\(P_4(x)\)</span> about <span class="arithmatex">\(x=2\)</span>. The graph of <span class="arithmatex">\(|f^{(5)}(x)|\)</span> is shown to be decreasing on <span class="arithmatex">\([2, 2.5]\)</span> with <span class="arithmatex">\(f^{(5)}(2) = 10\)</span> and <span class="arithmatex">\(f^{(5)}(2.5) = 2\)</span>. Find the Lagrange error bound for <span class="arithmatex">\(|f(2.5) - P_4(2.5)|\)</span>.</p>
-<details class="success">
-<summary>查看解析 (Click to Expand)</summary>
-<ol>
-<li><strong>Analyze <span class="arithmatex">\(M\)</span></strong>: On the interval <span class="arithmatex">\([2, 2.5]\)</span>, <span class="arithmatex">\(|f^{(5)}(x)|\)</span> is decreasing. Therefore, its <strong>maximum value</strong> <span class="arithmatex">\(M\)</span> occurs at the left endpoint, <span class="arithmatex">\(x=2\)</span>.</li>
-<li><strong><span class="arithmatex">\(M = 10\)</span></strong>.</li>
-<li><strong>Apply Formula (<span class="arithmatex">\(n=4\)</span>)</strong>:
-    $<span class="arithmatex">\(|R_4(2.5)| \leq \frac{10}{(4+1)!}(2.5-2)^{4+1}\)</span>$
-    $<span class="arithmatex">\(|R_4(2.5)| \leq \frac{10}{5!}(0.5)^5\)</span>$
-    $<span class="arithmatex">\(|R_4(2.5)| \leq \frac{10}{120}(0.03125) \approx 0.0026\)</span>$</li>
-</ol>
-</details>
-<hr />
-<div class="admonition warning">
-<p class="admonition-title">注意 (Common Mistake)</p>
-<p>在计算 <span class="arithmatex">\(M\)</span> 时，一定要看清题目给的是第几阶导数。如果是 <span class="arithmatex">\(P_n\)</span>，公式里永远用的是 <strong><span class="arithmatex">\(n+1\)</span></strong> 阶。</p>
+<div class="admonition tip">
+<p class="admonition-title">Extension: Error vs. Accuracy</p>
+<p>In computer science and numerical analysis, this theorem is vital. If you need a result accurate to <span class="arithmatex">\(10^{-6}\)</span> (six decimal places), you simply find the smallest <span class="arithmatex">\(n\)</span> such that <span class="arithmatex">\(a_{n+1} &lt; 0.000001\)</span>. This tells you exactly how much work (how many iterations) the computer needs to do to guarantee the result is correct.</p>
 </div>
-<p>https://math.stackexchange.com/questions/1974159/algebraic-expansion-of-1x1-x-is</p>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
+
+<div id="quiz10-10-1"></div>
+<script>
+  renderMCQ('quiz10-10-1', {
+    title: 'Calculating the Bound',
+    question: 'Consider the series <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{(-1)^n}{n!} \\)</span>. If we use the partial sum <span class="arithmatex">\\( S_5 \\)</span> to approximate the total sum, what is the maximum possible error?',
+    options: [
+      'A. <span class="arithmatex">\\( 1/120 \\)</span>',
+      'B. <span class="arithmatex">\\( 1/720 \\)</span>',
+      'C. <span class="arithmatex">\\( 1/5 \\)</span>',
+      'D. <span class="arithmatex">\\( 1/6 \\)</span>'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! The error bound is the magnitude of the next term, <span class='arithmatex'>\\( a_6 \\)</span>. Since <span class='arithmatex'>\\( 6! = 720 \\)</span>, the error is at most <span class='arithmatex'>\\( 1/720 \\)</span>.",
+      wrong: "The error bound is determined by the term immediately following your partial sum. If you stop at n=5, look at the n=6 term."
+    }
+  });
+</script>
+
+<div id="quiz10-10-2"></div>
+<script>
+  renderMCQ('quiz10-10-2', {
+    title: 'Theory of Error Bounds',
+    question: 'Which condition must be met to use the formula <span class="arithmatex">\\( |S - S_n| \\le a_{n+1} \\)</span>?',
+    options: [
+      'A. The series must be geometric.',
+      'B. The series must be absolutely convergent.',
+      'C. The series must satisfy the conditions of the Alternating Series Test.',
+      'D. The limit of the terms must be infinity.'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! This specific error bound only applies to alternating series that are convergent by the AST (decreasing terms and limit to zero).",
+      wrong: "Think about the name of the theorem. It is the 'Alternating Series' error bound. What test determines if such a series is well-behaved?"
+    }
+  });
+</script>
 
 
 

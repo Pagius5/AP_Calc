@@ -792,6 +792,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-geometric-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Geometric Series?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convergence-and-the-sum-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convergence and the Sum Formula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-1-frac12-frac14-frac18-dots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: \(1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -812,21 +864,101 @@
 
 <h1 id="102-working-with-geometric-series">10.2 Working with Geometric Series</h1>
 <div class="admonition abstract">
-<p class="admonition-title">Key Term: Common Ratio (<span class="arithmatex">\(r\)</span>)</p>
-<p>The fixed multiplier between successive terms.</p>
+<p class="admonition-title">Keywords</p>
+<p><strong>Geometric Series 等比级数</strong> • <strong>Common Ratio 公比</strong> </p>
+<p><strong>Convergence Condition 收敛条件</strong> • <strong>Infinite Sum Formula 无穷和公式</strong></p>
 </div>
+<h2 id="what-is-a-geometric-series">What is a Geometric Series?</h2>
+<p>A geometric series is a series where each term is found by multiplying the previous term by a fixed, non-zero number called the <strong>common ratio</strong> (<span class="arithmatex">\(r\)</span>).</p>
+<div class="admonition info">
+<p class="admonition-title">Core Concept: Geometric Series (LIM-7.A.3)</p>
+<p>A geometric series with first term <span class="arithmatex">\(a\)</span> and common ratio <span class="arithmatex">\(r\)</span> takes the form:</p>
+<div class="arithmatex">\[ \sum_{n=0}^{\infty} ar^n = a + ar + ar^2 + ar^3 + \dots \]</div>
+<p>To find the common ratio <span class="arithmatex">\(r\)</span>, you can divide any term by its preceding term: <span class="arithmatex">\(r = \frac{a_{n+1}}{a_n}\)</span>.</p>
+</div>
+<hr />
+<h2 id="convergence-and-the-sum-formula">Convergence and the Sum Formula</h2>
+<p>Unlike the Harmonic series, a geometric series only converges if the "steps" get small enough, quickly enough.</p>
+<div class="admonition info">
+<p class="admonition-title">Theorem: Convergence of Geometric Series (LIM-7.A.4)</p>
+<p>The geometric series <span class="arithmatex">\(\sum_{n=0}^{\infty} ar^n\)</span> <strong>converges</strong> if and only if:</p>
+<div class="arithmatex">\[ |r| &lt; 1 \]</div>
+<p>If it converges, the sum <span class="arithmatex">\(S\)</span> of the infinite series is:</p>
+<div class="arithmatex">\[ S = \frac{a}{1 - r} \]</div>
+<p>If <span class="arithmatex">\(|r| \geq 1\)</span>, the series <strong>diverges</strong>.</p>
+</div>
+<hr />
+<h2 id="example-1-frac12-frac14-frac18-dots">Example: <span class="arithmatex">\(1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots\)</span></h2>
+<p>Here, the first term <strong><span class="arithmatex">\(a = 1\)</span></strong> and the common ratio <strong><span class="arithmatex">\(r = 1/2\)</span></strong>.
+Since <span class="arithmatex">\(|1/2| &lt; 1\)</span>, the series converges.</p>
+<div class="arithmatex">\[ S = \frac{1}{1 - 1/2} = \frac{1}{1/2} = 2 \]</div>
+<div id="box_geometric_conv" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_geometric_conv', {
+      boundingbox: [-1, 2.5, 10, -0.5],
+      functions: [
+          {expr: '2', domain: [-1, 10], color: '#d62728'} // Horizontal Asymptote at S=2
+      ],
+      points: [
+          [0, 1, true],      // S_0
+          [1, 1.5, true],    // S_1
+          [2, 1.75, true],   // S_2
+          [3, 1.875, true],  // S_3
+          [4, 1.9375, true], // S_4
+          [5, 1.9687, true],
+          [6, 1.9843, true]
+      ]
+  });
+</script>
+
+<hr />
 <div class="admonition tip">
-<p class="admonition-title">Definition: Geometric Series Test</p>
-<p>For the series <span class="arithmatex">\(\sum_{n=0}^{\infty} ar^n\)</span>:</p>
-<ol>
-<li>
-<p>If <span class="arithmatex">\(|r| &lt; 1\)</span>, the series <strong>converges</strong>. The sum is <span class="arithmatex">\(S = \frac{a}{1-r}\)</span>.</p>
-</li>
-<li>
-<p>If <span class="arithmatex">\(|r| \ge 1\)</span>, the series <strong>diverges</strong>.</p>
-</li>
-</ol>
+<p class="admonition-title">Extension: Zeno's Paradox</p>
+<p>The Greek philosopher Zeno once argued that motion is impossible. To walk across a room, you must first walk half the distance, then half of the remaining distance, and so on. He claimed you would have to complete an infinite number of tasks, which should take an infinite amount of time. </p>
+<p>Geometric series solve this paradox! They prove that the sum of an infinite number of distances (or time intervals) can equal a finite value. In our example above, <span class="arithmatex">\(1 + 1/2 + 1/4 \dots\)</span> perfectly equals <span class="arithmatex">\(2\)</span>.</p>
 </div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
+
+<div id="quiz10-2-1"></div>
+<script>
+  renderMCQ('quiz10-2-1', {
+    title: 'Calculating the Sum',
+    question: 'Evaluate the sum of the infinite series: <br> <span class="arithmatex">\\( \\sum\\limits_{n=0}^{\\infty} 3 \\left( \\frac{2}{5} \\right)^n \\)</span>',
+    options: [
+      'A. <span class="arithmatex">\\( 5 \\)</span>',
+      'B. <span class="arithmatex">\\( 3 \\)</span>',
+      'C. <span class="arithmatex">\\( 15/2 \\)</span>',
+      'D. Diverges'
+    ],
+    correctIndex: 0, 
+    feedback: {
+      correct: "Correct! Here <span class='arithmatex'>\\( a = 3 \\)</span> and <span class='arithmatex'>\\( r = 2/5 \\)</span>. <br> <span class='arithmatex'>\\( S = \\frac{3}{1 - 2/5} = \\frac{3}{3/5} = 5 \\)</span>.",
+      wrong: "Identify a and r first. Use the formula S = a / (1 - r)."
+    }
+  });
+</script>
+
+<div id="quiz10-2-2"></div>
+<script>
+  renderMCQ('quiz10-2-2', {
+    title: 'Identifying Divergence',
+    question: 'Which of the following geometric series diverges?',
+    options: [
+      'A. <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} (0.99)^n \\)</span>',
+      'B. <span class="arithmatex">\\( \\sum\\limits_{n=0}^{\\infty} \\frac{3^n}{2^n} \\)</span>',
+      'C. <span class="arithmatex">\\( 10 - 5 + 2.5 - 1.25 + \\dots \\)</span>',
+      'D. <span class="arithmatex">\\( \\sum\\limits_{n=0}^{\\infty} \\left( \\frac{\\pi}{4} \\right)^n \\)</span>'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! For option B, <span class='arithmatex'>\\( r = 3/2 = 1.5 \\)</span>. Since <span class='arithmatex'>\\( |1.5| \\ge 1 \\)</span>, the series diverges. Note that <span class='arithmatex'>\\( \\pi/4 \\approx 0.78 \\)</span>, so option D actually converges!",
+      wrong: "A geometric series diverges if the absolute value of the common ratio |r| is greater than or equal to 1. Check the ratios for each option."
+    }
+  });
+</script>
 
 
 

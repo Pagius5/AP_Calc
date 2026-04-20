@@ -792,6 +792,86 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-benchmarking-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Benchmarking Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-direct-comparison-test-dct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Direct Comparison Test (DCT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-limit-comparison-test-lct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Limit Comparison Test (LCT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Limit Comparison Test (LCT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-choose-b_n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Choose \(b_n\)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizing Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -811,23 +891,111 @@
 
 
 <h1 id="106-comparison-tests-for-convergence">10.6 Comparison Tests for Convergence</h1>
-<div class="admonition tip">
-<p class="admonition-title">Definition: Direct Comparison Test</p>
-<p>Suppose <span class="arithmatex">\(0 \le a_n \le b_n\)</span> for all <span class="arithmatex">\(n\)</span>:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Comparison Test 直接比较判别法</strong> • <strong>Limit Comparison Test 极限比较判别法</strong> </p>
+<p><strong>Benchmark Series 基准级数</strong> • <strong>Dominant Terms 主导项</strong></p>
+</div>
+<h2 id="the-benchmarking-strategy">The Benchmarking Strategy</h2>
+<p>To use comparison tests, you must first have a "benchmark" series <span class="arithmatex">\(\sum b_n\)</span> whose behavior is already known. Most often, we use:</p>
+<ul>
+<li><strong><span class="arithmatex">\(p\)</span>-series:</strong> <span class="arithmatex">\(\sum \frac{1}{n^p}\)</span></li>
+<li><strong>Geometric series:</strong> <span class="arithmatex">\(\sum ar^n\)</span></li>
+</ul>
+<hr />
+<h2 id="1-direct-comparison-test-dct">1. Direct Comparison Test (DCT)</h2>
+<p>The DCT is based on a simple logical "sandwich" idea. If all terms of your series are positive (<span class="arithmatex">\(a_n, b_n &gt; 0\)</span>):</p>
 <ol>
 <li>
-<p>If the "larger" series <span class="arithmatex">\(\sum b_n\)</span> converges, then the "smaller" series <span class="arithmatex">\(\sum a_n\)</span> <strong>converges</strong>.</p>
+<p><strong>The Ceiling Rule:</strong> If <span class="arithmatex">\(a_n \le b_n\)</span> and the "larger" series <span class="arithmatex">\(\sum b_n\)</span> <strong>converges</strong>, then the "smaller" series <span class="arithmatex">\(\sum a_n\)</span> must also <strong>converge</strong>.</p>
 </li>
 <li>
-<p>If the "smaller" series <span class="arithmatex">\(\sum a_n\)</span> diverges, then the "larger" series <span class="arithmatex">\(\sum b_n\)</span> <strong>diverges</strong>.</p>
+<p><strong>The Floor Rule:</strong> If <span class="arithmatex">\(a_n \ge b_n\)</span> and the "smaller" series <span class="arithmatex">\(\sum b_n\)</span> <strong>diverges</strong>, then the "larger" series <span class="arithmatex">\(\sum a_n\)</span> must also <strong>diverge</strong>.</p>
 </li>
 </ol>
+<div class="admonition info">
+<p class="admonition-title">核心要点：Direct Comparison (LIM-7.A.8)</p>
+<p>To use DCT effectively, you must establish a clear inequality (<span class="arithmatex">\(a_n \le b_n\)</span> or <span class="arithmatex">\(a_n \ge b_n\)</span>) for all <span class="arithmatex">\(n\)</span> beyond a certain point.</p>
 </div>
+<hr />
+<h2 id="2-limit-comparison-test-lct">2. Limit Comparison Test (LCT)</h2>
+<p>The DCT can be frustrating if the inequality goes the "wrong way." For example, <span class="arithmatex">\(\sum \frac{1}{n^2 - 1}\)</span> is slightly <em>larger</em> than the convergent <span class="arithmatex">\(\sum \frac{1}{n^2}\)</span>, so the Ceiling Rule doesn't apply. This is where the <strong>Limit Comparison Test</strong> shines.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：Limit Comparison (LIM-7.A.9)</p>
+<p>Suppose <span class="arithmatex">\(a_n &gt; 0\)</span> and <span class="arithmatex">\(b_n &gt; 0\)</span>. Calculate the limit of the ratio of the two series:</p>
+<div class="arithmatex">\[ L = \lim_{n \to \infty} \frac{a_n}{b_n} \]</div>
+<p>If <span class="arithmatex">\(0 &lt; L &lt; \infty\)</span> (where <span class="arithmatex">\(L\)</span> is a finite, positive number), then <span class="arithmatex">\(\sum a_n\)</span> and <span class="arithmatex">\(\sum b_n\)</span> <strong>share the same fate</strong>—they either both converge or both diverge.</p>
+</div>
+<h3 id="how-to-choose-b_n">How to Choose <span class="arithmatex">\(b_n\)</span>?</h3>
+<p>Focus on the <strong>dominant terms</strong> (highest powers). </p>
+<ul>
+<li><strong>Example:</strong> For <span class="arithmatex">\(\sum \frac{3n + 5}{n^3 - 2n + 1}\)</span>, the dominant part is <span class="arithmatex">\(\frac{n}{n^3} = \frac{1}{n^2}\)</span>. </li>
+<li>Compare it to the <span class="arithmatex">\(p\)</span>-series <span class="arithmatex">\(b_n = \frac{1}{n^2}\)</span> (which converges). Since the ratio limit will be <span class="arithmatex">\(3\)</span>, the original series also converges.</li>
+</ul>
+<hr />
+<h2 id="visualizing-comparison">Visualizing Comparison</h2>
+<p>In the graph below, notice how <span class="arithmatex">\(a_n = \frac{1}{n^2+1}\)</span> (blue) is always smaller than the benchmark <span class="arithmatex">\(b_n = \frac{1}{n^2}\)</span> (orange). Since the area under <span class="arithmatex">\(1/n^2\)</span> is finite, the area under the blue curve must also be finite.</p>
+<div id="box_comparison" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_comparison', {
+      boundingbox: [-1, 1.2, 10, -0.2],
+      functions: [
+          {expr: '1/(x^2)', domain: [1, 10], color: '#ff7f0e'},     // Benchmark
+          {expr: '1/(x^2 + 1)', domain: [1, 10], color: '#1f77b4'}  // Target
+      ],
+      colors: ['#ff7f0e', '#1f77b4']
+  });
+</script>
+
+<hr />
 <div class="admonition tip">
-<p class="admonition-title">Definition: Limit Comparison Test</p>
-<p>Suppose <span class="arithmatex">\(a_n &gt; 0\)</span> and <span class="arithmatex">\(b_n &gt; 0\)</span>. </p>
-<p>If <span class="arithmatex">\(\lim_{n \to \infty} \frac{a_n}{b_n} = L\)</span>, where <span class="arithmatex">\(0 &lt; L &lt; \infty\)</span>, then both series <span class="arithmatex">\(\sum a_n\)</span> and <span class="arithmatex">\(\sum b_n\)</span> share the same behavior (both converge or both diverge).</p>
+<p class="admonition-title">Extension: Growth Hierarchy Revisited</p>
+<p>When using LCT, the growth hierarchy we learned in Unit 1 is your best friend. 
+<span class="arithmatex">\(\ln n \ll n^p \ll e^n\)</span>. 
+If you are comparing <span class="arithmatex">\(\sum \frac{\ln n}{n^2}\)</span> to <span class="arithmatex">\(\sum \frac{1}{n^{1.5}}\)</span>, knowing that <span class="arithmatex">\(n^{0.5}\)</span> grows faster than <span class="arithmatex">\(\ln n\)</span> tells you that <span class="arithmatex">\(\frac{\ln n}{n^2}\)</span> will eventually be smaller than <span class="arithmatex">\(\frac{n^{0.5}}{n^2} = \frac{1}{n^{1.5}}\)</span>. This logic is the heart of "Asymptotic Analysis" in computer science.</p>
 </div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
+
+<div id="quiz10-6-1"></div>
+<script>
+  renderMCQ('quiz10-6-1', {
+    title: 'Direct Comparison Logic',
+    question: 'Suppose <span class="arithmatex">\\( 0 < a_n < \\frac{1}{n} \\)</span> for all <span class="arithmatex">\\( n \\)</span>. What can we conclude about <span class="arithmatex">\\( \\sum a_n \\)</span> using the Direct Comparison Test?',
+    options: [
+      'A. The series converges.',
+      'B. The series diverges.',
+      'C. No conclusion can be drawn.',
+      'D. The series converges to 0.'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! The benchmark series <span class='arithmatex'>\\( \\sum 1/n \\)</span> diverges. Being 'smaller than a divergent series' doesn't prove anything (you could be a tiny convergent series or a slightly smaller divergent one). DCT only works if you are 'larger than divergent' or 'smaller than convergent'.",
+      wrong: "If you are smaller than something that goes to infinity, do you HAVE to go to infinity? Or could you stay small? Think about the 'Ceiling' and 'Floor' rules."
+    }
+  });
+</script>
+
+<div id="quiz10-6-2"></div>
+<script>
+  renderMCQ('quiz10-6-2', {
+    title: 'Limit Comparison Selection',
+    question: 'To determine the convergence of <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{n^2 + 3}{\\sqrt{n^7 + n^2}} \\)</span>, which benchmark series <span class="arithmatex">\\( b_n \\)</span> is most appropriate for the Limit Comparison Test?',
+    options: [
+      'A. <span class="arithmatex">\\( \\sum \\frac{1}{n^2} \\)</span>',
+      'B. <span class="arithmatex">\\( \\sum \\frac{1}{n^{1.5}} \\)</span>',
+      'C. <span class="arithmatex">\\( \\sum \\frac{1}{n^{3.5}} \\)</span>',
+      'D. <span class="arithmatex">\\( \\sum \\frac{1}{n^{0.5}} \\)</span>'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! Look at the dominant terms: Numerator <span class='arithmatex'>\\( \\approx n^2 \\)</span>, Denominator <span class='arithmatex'>\\( \\approx \\sqrt{n^7} = n^{3.5} \\)</span>. Thus, <span class='arithmatex'>\\( b_n = \\frac{n^2}{n^{3.5}} = \\frac{1}{n^{1.5}} \\)</span>.",
+      wrong: "Simplify the ratio of the highest power of n in the numerator to the highest power of n in the denominator."
+    }
+  });
+</script>
 
 
 

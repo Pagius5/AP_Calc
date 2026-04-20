@@ -792,6 +792,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-bridge-between-sums-and-integrals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Bridge Between Sums and Integrals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-the-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizing the Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-golden-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Golden Conditions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Golden Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-testing-sum_n1infty-frac1n2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Testing \(\sum_{n=1}^{\infty} \frac{1}{n^2}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -811,14 +880,114 @@
 
 
 <h1 id="104-integral-test-for-convergence">10.4 Integral Test for Convergence</h1>
-<div class="admonition tip">
-<p class="admonition-title">Definition: Integral Test</p>
-<p>Let <span class="arithmatex">\(a_n = f(n)\)</span>. </p>
-<p>If <span class="arithmatex">\(f(x)\)</span> is positive, continuous, and decreasing on <span class="arithmatex">\([1, \infty)\)</span>, then:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Integral Test 积分判别法</strong> • <strong>Positive 正的</strong> </p>
+<p><strong>Continuous 连续的</strong> • <strong>Decreasing 递减的</strong> • <strong>Improper Integral 反常积分</strong></p>
+</div>
+<h2 id="the-bridge-between-sums-and-integrals">The Bridge Between Sums and Integrals</h2>
+<p>The Integral Test states that if the terms of a series can be modeled by a well-behaved function, then the infinite series and the improper integral will share the exact same convergence behavior.</p>
+<div class="admonition info">
+<p class="admonition-title">Theorem: The Integral Test (LIM-7.A.6)</p>
+<p>Let <span class="arithmatex">\(f\)</span> be a function that is <strong>positive</strong>, <strong>continuous</strong>, and <strong>decreasing</strong> for all <span class="arithmatex">\(x \geq 1\)</span>. Let <span class="arithmatex">\(a_n = f(n)\)</span>.</p>
 <ul>
-<li><span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span> and <span class="arithmatex">\(\int_{1}^{\infty} f(x) dx\)</span> either both converge or both diverge.</li>
+<li>
+<p>If the improper integral <span class="arithmatex">\(\int_{1}^{\infty} f(x) \, dx\)</span> <strong>converges</strong>, then the series <span class="arithmatex">\(\sum\limits_{n=1}^{\infty} a_n\)</span> <strong>converges</strong>.</p>
+</li>
+<li>
+<p>If the improper integral <span class="arithmatex">\(\int_{1}^{\infty} f(x) \, dx\)</span> <strong>diverges</strong>, then the series <span class="arithmatex">\(\sum\limits_{n=1}^{\infty} a_n\)</span> <strong>diverges</strong>.</p>
+</li>
 </ul>
 </div>
+<hr />
+<h2 id="visualizing-the-test">Visualizing the Test</h2>
+<p>Why does this work? We can view the terms of a series <span class="arithmatex">\(a_n\)</span> as areas of rectangles with a width of <span class="arithmatex">\(1\)</span>. </p>
+<p>In the graph below, the curve is <span class="arithmatex">\(f(x) = \frac{1}{x^2}\)</span>. The points represent the terms of the series <span class="arithmatex">\(\sum \frac{1}{n^2}\)</span>. Since the total area under the curve from <span class="arithmatex">\(1\)</span> to <span class="arithmatex">\(\infty\)</span> is finite, the sum of the terms (which are bounded by the curve) must also be finite.</p>
+<div id="box_integral_test" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_integral_test', {
+      boundingbox: [-1, 1.5, 10, -0.5],
+      functions: [
+          {expr: '1/(x^2)', domain: [1, 10], color: '#1f77b4'}
+      ],
+      points: [
+          [1, 1, true],
+          [2, 0.25, true],
+          [3, 0.111, true],
+          [4, 0.0625, true],
+          [5, 0.04, true]
+      ]
+  });
+</script>
+
+<hr />
+<h2 id="the-three-golden-conditions">The Three Golden Conditions</h2>
+<p>Before you can use the Integral Test on the AP Exam, you <strong>must</strong> state and verify that the corresponding function <span class="arithmatex">\(f(x)\)</span> is:</p>
+<ol>
+<li>
+<p><strong>Positive:</strong> The terms are above the x-axis.</p>
+</li>
+<li>
+<p><strong>Continuous:</strong> There are no vertical asymptotes or holes for <span class="arithmatex">\(x \geq 1\)</span>.</p>
+</li>
+<li>
+<p><strong>Decreasing:</strong> The derivatives are negative (<span class="arithmatex">\(f'(x) &lt; 0\)</span>) or the terms clearly shrink.</p>
+</li>
+</ol>
+<h4 id="example-testing-sum_n1infty-frac1n2">Example: Testing <span class="arithmatex">\(\sum_{n=1}^{\infty} \frac{1}{n^2}\)</span></h4>
+<p>Let <span class="arithmatex">\(f(x) = \frac{1}{x^2}\)</span>. This function is positive, continuous, and decreasing on <span class="arithmatex">\([1, \infty)\)</span>. Let's integrate:</p>
+<div class="arithmatex">\[ \int_{1}^{\infty} \frac{1}{x^2} \, dx = \lim_{t \to \infty} \left[ -\frac{1}{x} \right]_{1}^{t} = \lim_{t \to \infty} \left( -\frac{1}{t} + 1 \right) = 1 \]</div>
+<p>Since the integral converges to <span class="arithmatex">\(1\)</span>, the series <span class="arithmatex">\(\sum_{n=1}^{\infty} \frac{1}{n^2}\)</span> <strong>converges</strong>. (Note: This does <em>not</em> mean the sum of the series is <span class="arithmatex">\(1\)</span>. The integral only shares convergence, not the exact sum value).</p>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: Euler's Solution to the Basel Problem</p>
+<p>We just proved that <span class="arithmatex">\(\sum_{n=1}^{\infty} \frac{1}{n^2}\)</span> converges using the Integral Test. But what does it converge to? 
+This was known as the <em>Basel Problem</em>. In 1734, the brilliant mathematician Leonhard Euler shocked the world by proving that the sum is exactly:</p>
+<div class="arithmatex">\[ \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6} \approx 1.6449 \]</div>
+<p>It is mind-bending that the infinite sum of squares of reciprocals yields a result involving <span class="arithmatex">\(\pi\)</span>, the circle constant!</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
+
+<div id="quiz10-4-1"></div>
+<script>
+  renderMCQ('quiz10-4-1', {
+    title: 'Verifying Conditions',
+    question: 'For which of the following series can the Integral Test NOT be used directly?',
+    options: [
+      'A. <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{1}{n} \\)</span>',
+      'B. <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{\\sin(n)}{n^2} \\)</span>',
+      'C. <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} e^{-n} \\)</span>',
+      'D. <span class="arithmatex">\\( \\sum\\limits_{n=2}^{\\infty} \\frac{1}{n\\ln(n)} \\)</span>'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! The terms of <span class='arithmatex'>\\( \\sum \\frac{\\sin(n)}{n^2} \\)</span> alternate between positive and negative because of the sine function. The Integral Test requires the function to be strictly positive.",
+      wrong: "Check the three conditions: positive, continuous, and decreasing. One of these options has terms that fluctuate in sign."
+    }
+  });
+</script>
+
+<div id="quiz10-4-2"></div>
+<script>
+  renderMCQ('quiz10-4-2', {
+    title: 'Applying the Test',
+    question: 'Consider the series <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{1}{n} \\)</span> (The Harmonic Series). What does the Integral Test conclude about it?',
+    options: [
+      'A. It converges because the integral yields 1.',
+      'B. It diverges because the integral evaluates to <span class="arithmatex">\\( \\ln(\\infty) \\)</span> which is infinite.',
+      'C. It converges because <span class="arithmatex">\\( \\lim\\limits_{n \\to \\infty} \\frac{1}{n} = 0 \\)</span>.',
+      'D. The test is inconclusive.'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! <span class='arithmatex'>\\( \\int_{1}^{\\infty} \\frac{1}{x} dx = [\\ln(x)]_{1}^{\\infty} = \\infty \\)</span>. Since the integral diverges, the Harmonic Series also diverges.",
+      wrong: "Set up the integral of 1/x from 1 to infinity. Recall that the antiderivative of 1/x is ln|x|."
+    }
+  });
+</script>
 
 
 

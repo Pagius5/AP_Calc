@@ -792,6 +792,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-ultimate-test-for-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "Ultimate" Test for Series
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-the-ratio-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use the Ratio Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Use the Ratio Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-evaluating-sum_n1infty-frac2nn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Evaluating \(\sum_{n=1}^{\infty} \frac{2^n}{n!}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-the-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizing the Ratio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -811,21 +880,133 @@
 
 
 <h1 id="108-ratio-test-for-convergence">10.8 Ratio Test for Convergence</h1>
-<div class="admonition tip">
-<p class="admonition-title">Definition: Ratio Test</p>
-<p>Let <span class="arithmatex">\(L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right|\)</span>:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Ratio Test 比值判别法</strong> • <strong>Absolute Convergence 绝对收敛</strong> </p>
+<p><strong>Factorials 阶乘</strong> • <strong>Exponentials 指数函数</strong> • <strong>Inconclusive 不确定/失效</strong></p>
+</div>
+<h2 id="the-ultimate-test-for-series">The "Ultimate" Test for Series</h2>
+<p>The <strong>Ratio Test</strong> is one of the most versatile tools in the series toolkit. It is specifically designed to handle series containing <strong>factorials (<span class="arithmatex">\(n!\)</span>)</strong> or <strong>exponentials (<span class="arithmatex">\(a^n\)</span>)</strong>, where other tests like the Integral Test or Comparison Test might be difficult to apply.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：The Ratio Test (LIM-7.A.11)</p>
+<p>Let <span class="arithmatex">\(\sum a_n\)</span> be a series with non-zero terms. Define the limit of the ratio of consecutive terms as:</p>
+<div class="arithmatex">\[ L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| \]</div>
 <ol>
 <li>
-<p>If <span class="arithmatex">\(L &lt; 1\)</span>, the series <strong>converges absolutely</strong>.</p>
+<p><strong>If <span class="arithmatex">\(L &lt; 1\)</span>:</strong> The series <strong>converges absolutely</strong>.</p>
 </li>
 <li>
-<p>If <span class="arithmatex">\(L &gt; 1\)</span>, the series <strong>diverges</strong>.</p>
+<p><strong>If <span class="arithmatex">\(L &gt; 1\)</span> (or <span class="arithmatex">\(L = \infty\)</span>):</strong> The series <strong>diverges</strong>.</p>
 </li>
 <li>
-<p>If <span class="arithmatex">\(L = 1\)</span>, the test is <strong>inconclusive</strong>.</p>
+<p><strong>If <span class="arithmatex">\(L = 1\)</span>:</strong> The test is <strong>inconclusive</strong>. (The series could converge or diverge; you must use a different test, such as the <span class="arithmatex">\(p\)</span>-series or Integral test).</p>
 </li>
 </ol>
 </div>
+<hr />
+<h2 id="when-to-use-the-ratio-test">When to Use the Ratio Test</h2>
+<p>The Ratio Test works by comparing the growth of the <span class="arithmatex">\((n+1)\)</span>-th term to the <span class="arithmatex">\(n\)</span>-th term. </p>
+<ul>
+<li>
+<p><strong>Factorials:</strong> Terms like <span class="arithmatex">\(n!\)</span> or <span class="arithmatex">\((2n)!\)</span> are perfect for the Ratio Test because the ratio simplifies beautifully: <span class="arithmatex">\(\frac{(n+1)!}{n!} = n+1\)</span>.</p>
+</li>
+<li>
+<p><strong>Exponentials:</strong> Terms like <span class="arithmatex">\(3^n\)</span> simplify as <span class="arithmatex">\(\frac{3^{n+1}}{3^n} = 3\)</span>.</p>
+</li>
+</ul>
+<h4 id="example-evaluating-sum_n1infty-frac2nn">Example: Evaluating <span class="arithmatex">\(\sum_{n=1}^{\infty} \frac{2^n}{n!}\)</span></h4>
+<ol>
+<li>
+<p><strong>Set up the ratio:</strong></p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \left| \frac{2^{n+1}}{(n+1)!} \cdot \frac{n!}{2^n} \right| \]</div>
+</li>
+<li>
+<p><strong>Simplify terms:</strong></p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \left| \frac{2 \cdot 2^n}{(n+1) \cdot n!} \cdot \frac{n!}{2^n} \right| = \lim_{n \to \infty} \frac{2}{n+1} \]</div>
+</li>
+<li>
+<p><strong>Evaluate the limit:</strong>
+    The limit is <strong>0</strong>. Since <span class="arithmatex">\(0 &lt; 1\)</span>, the series converges absolutely.</p>
+</li>
+</ol>
+<hr />
+<h2 id="visualizing-the-ratio">Visualizing the Ratio</h2>
+<p>For a series to converge via the Ratio Test, the "multiplier" between terms must eventually settle down to a value less than 1. In the graph below, we plot the ratio <span class="arithmatex">\(R_n = |a_{n+1}/a_n|\)</span> for the series <span class="arithmatex">\(\sum \frac{2^n}{n!}\)</span>.</p>
+<div id="box_ratio_viz" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_ratio_viz', {
+      boundingbox: [-1, 2.5, 10, -0.2],
+      functions: [
+          {expr: '1', domain: [-1, 15], color: '#d62728'} // The "Boundary" L=1
+      ],
+      points: [
+          [1, 1, true],         // R1 = a2/a1 = (4/2)/(2/1) = 1
+          [2, 0.666, true],     // R2 = a3/a2 = (8/6)/(4/2) = 0.666
+          [3, 0.5, true],       // R3 = a4/a3 = 0.5
+          [4, 0.4, true],       // R4 = a5/a4 = 0.4
+          [5, 0.333, true],     // R5 = 0.333
+          [6, 0.285, true]      
+      ]
+  });
+</script>
+
+<p>Because the ratio values (points) fall and stay below the red boundary line (<span class="arithmatex">\(L=1\)</span>), the series is guaranteed to converge.</p>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: The AP Exam Series Checklist</p>
+<p>According to the official <strong>AP Exclusion Statement</strong>, you are only assessed on these six specific tests:</p>
+<ol>
+<li><strong>nth Term Test</strong> (For divergence only)</li>
+<li><strong>Integral Test</strong></li>
+<li><strong>Comparison Test</strong> (Direct)</li>
+<li><strong>Limit Comparison Test</strong></li>
+<li><strong>Alternating Series Test</strong></li>
+<li><strong>Ratio Test</strong></li>
+</ol>
+<p>The Ratio Test is arguably the most crucial for the rest of Unit 10, as it is the primary method used to find the <strong>Radius of Convergence</strong> for Power Series.</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
+
+<div id="quiz10-8-1"></div>
+<script>
+  renderMCQ('quiz10-8-1', {
+    title: 'Applying the Ratio Test',
+    question: 'Evaluate the limit of the ratio <span class="arithmatex">\\( L = \\lim\\limits_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right| \\)</span> for the series <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{3^n}{n^2} \\)</span>.',
+    options: [
+      'A. <span class="arithmatex">\\( L = 0 \\)</span>',
+      'B. <span class="arithmatex">\\( L = 1 \\)</span>',
+      'C. <span class="arithmatex">\\( L = 3 \\)</span>',
+      'D. <span class="arithmatex">\\( L = \\infty \\)</span>'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! The ratio is <span class='arithmatex'>\\( \\frac{3^{n+1}}{(n+1)^2} \\cdot \\frac{n^2}{3^n} = 3 \\cdot \\frac{n^2}{(n+1)^2} \\)</span>. As <span class='arithmatex'>\\( n \\to \\infty \\)</span>, <span class='arithmatex'>\\( \\frac{n^2}{(n+1)^2} \\to 1 \\)</span>, so the limit is 3. Since <span class='arithmatex'>\\( 3 > 1 \\)</span>, the series diverges.",
+      wrong: "Set up the ratio and simplify the powers of 3. What happens to the ratio of the polynomial parts (n^2 and (n+1)^2) as n becomes very large?"
+    }
+  });
+</script>
+
+<div id="quiz10-8-2"></div>
+<script>
+  renderMCQ('quiz10-8-2', {
+    title: 'Recognizing Inconclusivity',
+    question: 'For which of the following series is the Ratio Test inconclusive?',
+    options: [
+      'A. <span class="arithmatex">\\( \\sum \\frac{n!}{10^n} \\)</span>',
+      'B. <span class="arithmatex">\\( \\sum \\frac{1}{n^2} \\)</span>',
+      'C. <span class="arithmatex">\\( \\sum \\left(\\frac{1}{2}\\right)^n \\)</span>',
+      'D. <span class="arithmatex">\\( \\sum \\frac{n}{e^n} \\)</span>'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! For any p-series <span class='arithmatex'>\\( \\sum 1/n^p \\)</span>, the ratio <span class='arithmatex'>\\( \\frac{n^p}{(n+1)^p} \\)</span> always approaches 1. The Ratio Test fails for all p-series and rational functions; you must use the p-series test or Integral Test instead.",
+      wrong: "The Ratio Test is inconclusive when the limit L = 1. This typically happens with functions that don't have factorials or exponentials to dominate the growth."
+    }
+  });
+</script>
 
 
 

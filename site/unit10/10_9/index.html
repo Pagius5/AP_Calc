@@ -19,7 +19,7 @@
     
     
       
-        <title>10 9 - AP Calculus Notes</title>
+        <title>10.9 Determining Absolute or Conditional Convergence - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#109-determining-absolute-or-conditional-convergence" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 9
+              10.9 Determining Absolute or Conditional Convergence
             
           </span>
         </div>
@@ -784,6 +789,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#two-ways-to-converge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Ways to Converge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties-of-absolute-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties of Absolute Convergence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classic-example-the-harmonic-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classic Example: The Harmonic Family
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +862,118 @@
   
 
 
-  <h1>10 9</h1>
+<h1 id="109-determining-absolute-or-conditional-convergence">10.9 Determining Absolute or Conditional Convergence</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Absolute Convergence 绝对收敛</strong> • <strong>Conditional Convergence 条件收敛</strong> </p>
+<p><strong>Rearrangement Theorem 重排定理</strong> • <strong>Magnitude 幅值</strong></p>
+</div>
+<h2 id="two-ways-to-converge">Two Ways to Converge</h2>
+<p>When we deal with series that have both positive and negative terms, we categorize their convergence into two types based on how they behave when all terms are made positive.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：Absolute vs. Conditional (LIM-7.A.12)</p>
+<ol>
+<li>
+<p><strong>Absolute Convergence:</strong> A series <span class="arithmatex">\(\sum a_n\)</span> converges absolutely if the series of absolute values <span class="arithmatex">\(\sum |a_n|\)</span> converges.</p>
+</li>
+<li>
+<p><strong>Conditional Convergence:</strong> A series <span class="arithmatex">\(\sum a_n\)</span> converges conditionally if the series <span class="arithmatex">\(\sum a_n\)</span> converges, but the series of absolute values <span class="arithmatex">\(\sum |a_n|\)</span> diverges.</p>
+</li>
+</ol>
+</div>
+<hr />
+<h2 id="properties-of-absolute-convergence">Properties of Absolute Convergence</h2>
+<p>Absolute convergence is a "stronger" form of convergence. It grants the series several mathematical "superpowers" that conditionally convergent series do not have.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：The Power of Absolute Convergence</p>
+<ul>
+<li>
+<p><strong>Convergence Guarantee (LIM-7.A.13):</strong> If a series converges absolutely, then it is guaranteed to converge in its original form. </p>
+<div class="arithmatex">\[\sum |a_n| \text{ converges} \implies \sum a_n \text{ converges.}\]</div>
+</li>
+<li>
+<p><strong>Rearrangement Property (LIM-7.A.14):</strong> If a series converges absolutely, you can rearrange or regroup the terms in any order without changing the sum. </p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="classic-example-the-harmonic-family">Classic Example: The Harmonic Family</h2>
+<p>The difference between these two types of convergence is best seen in the Harmonic series family:</p>
+<ul>
+<li>
+<p><strong>Alternating Harmonic Series:</strong> <span class="arithmatex">\(\sum \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} \dots\)</span>
+    This series <strong>converges</strong> (by AST), but its absolute version <span class="arithmatex">\(\sum \frac{1}{n}\)</span> <strong>diverges</strong> (Harmonic series). 
+    <strong>Conclusion:</strong> Conditionally Convergent.</p>
+</li>
+<li>
+<p><strong>Alternating <span class="arithmatex">\(p\)</span>-Series (<span class="arithmatex">\(p=2\)</span>):</strong> <span class="arithmatex">\(\sum \frac{(-1)^{n+1}}{n^2} = 1 - \frac{1}{4} + \frac{1}{9} - \frac{1}{16} \dots\)</span>
+    Its absolute version is <span class="arithmatex">\(\sum \frac{1}{n^2}\)</span>, which <strong>converges</strong> (<span class="arithmatex">\(p\)</span>-series test).
+    <strong>Conclusion:</strong> Absolutely Convergent.</p>
+</li>
+</ul>
+<div id="box_abs_cond" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_abs_cond', {
+      boundingbox: [-1, 1.2, 10, -0.6],
+      functions: [
+          {expr: '1/x', domain: [0.5, 10], color: '#ff7f0e'},     // Absolute magnitude
+          {expr: '-1/x', domain: [0.5, 10], color: '#ff7f0e'}    // Negative bound
+      ],
+      points: [
+          [1, 1, true], [2, -0.5, true], [3, 0.33, true], [4, -0.25, true], [5, 0.2, true]
+      ],
+      colors: ['#ff7f0e', '#ff7f0e']
+  });
+</script>
 
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: Riemann's Rearrangement Theorem</p>
+<p>Conditional convergence is surprisingly fragile. Bernhard Riemann proved that if a series is <strong>conditionally convergent</strong>, you can rearrange its terms to make it converge to <strong>any real number you want</strong>, or even make it diverge! </p>
+<p>For example, you could pick the terms of the Alternating Harmonic series in a specific order to make the sum exactly <span class="arithmatex">\(1,000,000\)</span> or <span class="arithmatex">\(\pi\)</span>. This is why absolute convergence is so important in physics and engineering—it ensures the result is stable regardless of how you "group" your data.</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
 
+<div id="quiz10-9-1"></div>
+<script>
+  renderMCQ('quiz10-9-1', {
+    title: 'Defining Convergence Type',
+    question: 'The series <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{(-1)^n}{n^3} \\)</span> is:',
+    options: [
+      'A. Absolutely Convergent',
+      'B. Conditionally Convergent',
+      'C. Divergent',
+      'D. Convergent by Ratio Test but Divergent by AST'
+    ],
+    correctIndex: 0, 
+    feedback: {
+      correct: "Correct! The absolute value version is <span class='arithmatex'>\\( \\sum 1/n^3 \\)</span>, which is a p-series with p=3. Since p > 1, it converges. Therefore, the original series converges absolutely.",
+      wrong: "Look at the absolute value of the terms. Does <span class='arithmatex'>\\( \\sum 1/n^3 \\)</span> converge or diverge?"
+    }
+  });
+</script>
+
+<div id="quiz10-9-2"></div>
+<script>
+  renderMCQ('quiz10-9-2', {
+    title: 'Absolute Convergence Logic',
+    question: 'If <span class="arithmatex">\\( \\sum |a_n| \\)</span> converges, which of the following MUST be true?',
+    options: [
+      'A. <span class="arithmatex">\\( \\sum a_n \\)</span> converges conditionally.',
+      'B. <span class="arithmatex">\\( \\sum a_n \\)</span> diverges.',
+      'C. <span class="arithmatex">\\( \\sum a_n \\)</span> converges absolutely and therefore converges.',
+      'D. <span class="arithmatex">\\( a_n \\)</span> must be a geometric sequence.'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! By theorem LIM-7.A.13, absolute convergence implies convergence.",
+      wrong: "Review the definitions. If the sum of the magnitudes is finite, is it possible for the sum with signs to be infinite?"
+    }
+  });
+</script>
 
 
 

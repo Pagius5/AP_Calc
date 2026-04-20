@@ -19,7 +19,7 @@
     
     
       
-        <title>10 1 - AP Calculus Notes</title>
+        <title>10.1 Defining Convergent and Divergent Infinite Series - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#101-defining-convergent-and-divergent-infinite-series" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 1
+              10.1 Defining Convergent and Divergent Infinite Series
             
           </span>
         </div>
@@ -784,6 +789,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-sequences-to-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Sequences to Series
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-partial-sum-s_n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Partial Sum (\(S_n\))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defining Convergence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizing Convergence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +873,111 @@
   
 
 
-  <h1>10 1</h1>
+<h1 id="101-defining-convergent-and-divergent-infinite-series">10.1 Defining Convergent and Divergent Infinite Series</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Infinite Series 无穷级数</strong> • <strong>Partial Sum 部分和</strong> </p>
+<p><strong>Convergence 收敛</strong> • <strong>Divergence 发散</strong> • <strong>Limit of Sequence 数列极限</strong></p>
+</div>
+<h2 id="from-sequences-to-series">From Sequences to Series</h2>
+<p>A <strong>sequence</strong> is an ordered list of numbers <span class="arithmatex">\(a_1, a_2, a_3, \dots, a_n\)</span>. An <strong>infinite series</strong> is the sum of those numbers:</p>
+<div class="arithmatex">\[ \sum_{n=1}^{\infty} a_n = a_1 + a_2 + a_3 + \dots + a_n + \dots \]</div>
+<p>But how do we add up an infinite number of things? We do it by looking at the limit of "partial chunks" of the sum.</p>
+<hr />
+<h2 id="the-partial-sum-s_n">The Partial Sum (<span class="arithmatex">\(S_n\)</span>)</h2>
+<div class="admonition info">
+<p class="admonition-title">Core Concept: The <span class="arithmatex">\(n\)</span>-th Partial Sum (LIM-7.A.1)</p>
+<p>The <strong><span class="arithmatex">\(n\)</span>-th partial sum</strong>, denoted by <span class="arithmatex">\(S_n\)</span>, is the sum of the first <span class="arithmatex">\(n\)</span> terms of the series:</p>
+<div class="arithmatex">\[ S_n = \sum_{i=1}^{n} a_i = a_1 + a_2 + a_3 + \dots + a_n \]</div>
+</div>
+<p>As we add more terms, we create a new sequence called the <strong>sequence of partial sums</strong>: <span class="arithmatex">\(\{S_1, S_2, S_3, \dots, S_n, \dots\}\)</span>.</p>
+<hr />
+<h2 id="defining-convergence">Defining Convergence</h2>
+<div class="admonition info">
+<p class="admonition-title">Core Concept: Convergence vs. Divergence (LIM-7.A.2)</p>
+<p>An infinite series <span class="arithmatex">\(\sum\limits_{n=1}^{\infty} a_n\)</span> <strong>converges</strong> to a real number <span class="arithmatex">\(S\)</span> if and only if the limit of its sequence of partial sums exists and equals <span class="arithmatex">\(S\)</span>:</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} S_n = S \]</div>
+<p>If the limit <span class="arithmatex">\(\lim\limits_{n \to \infty} S_n\)</span> does not exist (e.g., it goes to <span class="arithmatex">\(\infty\)</span> or oscillates), the series is said to <strong>diverge</strong>.</p>
+</div>
+<hr />
+<h2 id="visualizing-convergence">Visualizing Convergence</h2>
+<p>Consider the series <span class="arithmatex">\(\sum_{n=1}^{\infty} \left(\frac{1}{2}\right)^n = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots\)</span>
+The partial sums are:</p>
+<ul>
+<li><span class="arithmatex">\(S_1 = 0.5\)</span></li>
+<li><span class="arithmatex">\(S_2 = 0.75\)</span></li>
+<li><span class="arithmatex">\(S_3 = 0.875\)</span></li>
+<li><span class="arithmatex">\(S_4 = 0.9375\)</span></li>
+</ul>
+<p>As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(S_n \to 1\)</span>.</p>
+<div id="box_series_conv" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_series_conv', {
+      boundingbox: [-1, 1.5, 10, -0.5],
+      functions: [
+          {expr: '1', domain: [-1, 10], color: '#d62728'} // The limit S = 1
+      ],
+      points: [
+          [1, 0.5, true],
+          [2, 0.75, true],
+          [3, 0.875, true],
+          [4, 0.9375, true],
+          [5, 0.96875, true],
+          [6, 0.9843, true],
+          [7, 0.9921, true],
+          [8, 0.9960, true]
+      ]
+  });
+</script>
 
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: The Riemann Zeta Function</p>
+<p>Series are not just for calculus homework; they are at the heart of number theory. The <strong>Riemann Zeta Function</strong>, <span class="arithmatex">\(\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s}\)</span>, involves summing infinite terms. </p>
+<p>The famous <strong>Riemann Hypothesis</strong> (one of the Millenium Prize Problems) concerns the zeros of this function. Proving it would unlock deep secrets about the distribution of prime numbers! For now, just know that when <span class="arithmatex">\(s=1\)</span>, the series <span class="arithmatex">\(\sum \frac{1}{n}\)</span> is called the <em>Harmonic Series</em>, and it actually diverges to <span class="arithmatex">\(\infty\)</span>, even though the terms being added get smaller and smaller.</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
 
+<div id="quiz10-1-1"></div>
+<script>
+  renderMCQ('quiz10-1-1', {
+    title: 'Defining Convergence',
+    question: 'If the sequence of partial sums of a series is given by <span class="arithmatex">\\( S_n = \\frac{2n}{3n+1} \\)</span>, does the infinite series converge?',
+    options: [
+      'A. No, because the sum depends on n.',
+      'B. Yes, it converges to 0.',
+      'C. Yes, it converges to 2/3.',
+      'D. No, it diverges to infinity.'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! By definition, the sum of an infinite series is the limit of its partial sums. <span class='arithmatex'>\\( \\lim\\limits_{n \\to \\infty} \\frac{2n}{3n+1} = \\frac{2}{3} \\)</span>.",
+      wrong: "The series converges if the limit of S_n as n goes to infinity is a finite real number. Calculate that limit."
+    }
+  });
+</script>
+
+<div id="quiz10-1-2"></div>
+<script>
+  renderMCQ('quiz10-1-2', {
+    title: 'Series vs. Sequence',
+    question: 'Suppose <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} a_n \\)</span> converges to 5. What can be said about the nth partial sum <span class="arithmatex">\\( S_n \\)</span>?',
+    options: [
+      'A. <span class="arithmatex">\\( S_n = 5 \\)</span> for all n.',
+      'B. <span class="arithmatex">\\( a_n \\to 5 \\)</span> as <span class="arithmatex">\\( n \\to \\infty \\)</span>.',
+      'C. <span class="arithmatex">\\( S_n \\to 5 \\)</span> as <span class="arithmatex">\\( n \\to \\infty \\)</span>.',
+      'D. <span class="arithmatex">\\( S_n \\)</span> must be less than 5 for all n.'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! The very definition of a series converging to S is that the limit of its partial sums is S.",
+      wrong: "Review the definition: The sum of the series is the limit of the partial sums. It doesn't mean every partial sum is equal to that limit."
+    }
+  });
+</script>
 
 
 

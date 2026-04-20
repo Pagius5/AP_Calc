@@ -19,7 +19,7 @@
     
     
       
-        <title>10.5 Harmonic Series and \(p\)-Series - AP Calculus Notes</title>
+        <title>10.5 Harmonic Series and p-Series - AP Calculus Notes</title>
       
     
     
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10.5 Harmonic Series and \(p\)-Series
+              10.5 Harmonic Series and p-Series
             
           </span>
         </div>
@@ -792,6 +792,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-harmonic-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Harmonic Series
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-why-the-harmonic-series-diverges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proof: Why the Harmonic Series Diverges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-p-series-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The p-Series Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -810,30 +862,152 @@
   
 
 
-<h1 id="105-harmonic-series-and-p-series">10.5 Harmonic Series and <span class="arithmatex">\(p\)</span>-Series</h1>
-<div class="admonition tip">
-<p class="admonition-title">Definition: <span class="arithmatex">\(p\)</span>-Series Test</p>
-<p>For the series <span class="arithmatex">\(\sum_{n=1}^{\infty} \frac{1}{n^p}\)</span>:</p>
+<h1 id="105-harmonic-series-and-p-series">10.5 Harmonic Series and p-Series</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Harmonic Series 调和级数</strong> • <strong>p-Series p-级数</strong> </p>
+<p><strong>Riemann Zeta Function 黎曼Zeta函数</strong></p>
+</div>
+<h2 id="the-harmonic-series">The Harmonic Series</h2>
+<p>The <strong>Harmonic Series</strong> is the sum of the reciprocals of the positive integers:</p>
+<div class="arithmatex">\[ \sum_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \dots \]</div>
+<p>Even though the terms <span class="arithmatex">\(\frac{1}{n}\)</span> approach zero, the series <strong>diverges</strong>. It grows toward infinity, albeit very slowly.</p>
+<hr />
+<h2 id="proof-why-the-harmonic-series-diverges">Proof: Why the Harmonic Series Diverges</h2>
+<p>We can prove divergence using a "grouping" method (originally discovered by Nicole Oresme). We compare the Harmonic series to a series that we know diverges because it adds up infinitely many halves.</p>
 <ol>
 <li>
-<p>If <span class="arithmatex">\(p &gt; 1\)</span>, the series <strong>converges</strong>.</p>
+<p><strong>Write out the series:</strong>
+    <span class="arithmatex">\(S = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8} + \dots\)</span></p>
 </li>
 <li>
-<p>If <span class="arithmatex">\(p \le 1\)</span>, the series <strong>diverges</strong>.</p>
+<p><strong>Group the terms into powers of 2:</strong>
+    <span class="arithmatex">\(S = 1 + \left( \frac{1}{2} \right) + \left( \frac{1}{3} + \frac{1}{4} \right) + \left( \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8} \right) + \dots\)</span></p>
+</li>
+<li>
+<p><strong>Replace terms with smaller values:</strong></p>
+<ul>
+<li>In the second group: <span class="arithmatex">\(\frac{1}{3} + \frac{1}{4} &gt; \frac{1}{4} + \frac{1}{4} = \frac{1}{2}\)</span></li>
+<li>In the third group: <span class="arithmatex">\(\frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8} &gt; \frac{1}{8} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} = \frac{1}{2}\)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>Establish the inequality:</strong>
+    <span class="arithmatex">\(S &gt; 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \dots\)</span></p>
 </li>
 </ol>
-<p><em>Note: When <span class="arithmatex">\(p=1\)</span>, it is called the </em><em>Harmonic Series</em><em>.</em></p>
-</div>
+<p>Since we are adding <span class="arithmatex">\(1/2\)</span> infinitely many times, the sum must be infinite. Therefore, the Harmonic series <strong>diverges</strong>.</p>
+<hr />
+<h2 id="the-p-series-test">The p-Series Test</h2>
+<p>The Harmonic series is a specific case (<span class="arithmatex">\(p=1\)</span>) of a broader family called <strong><span class="arithmatex">\(p\)</span>-series</strong>.</p>
 <div class="admonition info">
-<p class="admonition-title">Extension: The Basel Problem</p>
-<p>The <span class="arithmatex">\(p\)</span>-series test confirms that <span class="arithmatex">\(\sum_{n=1}^{\infty} \frac{1}{n^2}\)</span> converges since <span class="arithmatex">\(p=2 &gt; 1\)</span>. However, finding the <em>exact</em> value was a major challenge until <strong>Leonhard Euler</strong> solved it in 1734.</p>
-<p><strong>The Discovery:</strong></p>
-<div class="arithmatex">\[\sum_{n=1}^{\infty} \frac{1}{n^2} = 1 + \frac{1}{4} + \frac{1}{9} + \frac{1}{16} + \dots = \frac{\pi^2}{6}\]</div>
-<p><strong>How he did it (The Intuition):</strong></p>
-<p>Euler treated the Maclaurin series for <span class="arithmatex">\(\frac{\sin x}{x}\)</span> as if it were an infinite polynomial:</p>
-<div class="arithmatex">\[\frac{\sin x}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \dots\]</div>
-<p>By comparing this to the roots of the sine function (which occur at <span class="arithmatex">\(x = \pm \pi, \pm 2\pi, \dots\)</span>), he elegantly extracted the value <span class="arithmatex">\(\frac{\pi^2}{6}\)</span>. This result is also the value of the <strong>Riemann Zeta Function</strong> at <span class="arithmatex">\(s=2\)</span>, or <span class="arithmatex">\(\zeta(2)\)</span>.</p>
+<p class="admonition-title">核心要点：The p-Series Test (LIM-7.A.7)</p>
+<p>A series of the form <span class="arithmatex">\(\sum\limits_{n=1}^{\infty} \frac{1}{n^p}\)</span> is called a <strong><span class="arithmatex">\(p\)</span>-series</strong>, where <span class="arithmatex">\(p\)</span> is a positive constant.</p>
+<ul>
+<li><strong>Converges</strong> if <span class="arithmatex">\(p &gt; 1\)</span>.</li>
+<li><strong>Diverges</strong> if <span class="arithmatex">\(p \le 1\)</span>.</li>
+</ul>
 </div>
+<div id="box_pseries_comp" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_pseries_comp', {
+      boundingbox: [-1, 1.5, 10, -0.5],
+      functions: [
+          {expr: '1/x', domain: [1, 10], color: '#ff7f0e'},     // p=1 (Diverges)
+          {expr: '1/(x^2)', domain: [1, 10], color: '#1f77b4'}  // p=2 (Converges)
+      ],
+      colors: ['#ff7f0e', '#1f77b4']
+  });
+</script>
+
+<p>Notice that <span class="arithmatex">\(1/n^2\)</span> (blue) approaches the x-axis much faster than <span class="arithmatex">\(1/n\)</span> (orange). That extra speed is what allows the sum to converge to a finite number.</p>
+<hr />
+<details class="tip">
+<summary>Extension：The Basel Problem</summary>
+<p>In Section 1.8, we used the Squeeze Theorem to prove <span class="arithmatex">\(\lim\limits_{x \to 0} \frac{\sin x}{x} = 1\)</span>. In Section 10.4, we used the Integral Test to prove that the <span class="arithmatex">\(p\)</span>-series <span class="arithmatex">\(\sum\limits_{n=1}^{\infty} \frac{1}{n^2}\)</span> converges.</p>
+<p>But exactly <strong>what</strong> does it converge to? This question baffled the greatest mathematicians for 90 years until 1734, when a 28-year-old <strong>Leonhard Euler</strong> provided a solution that shocked the mathematical world.</p>
+<p>1.The Challenge</p>
+<p>Find the exact sum of the reciprocals of the squares of all positive integers:</p>
+<div class="arithmatex">\[ S = 1 + \frac{1}{4} + \frac{1}{9} + \frac{1}{16} + \frac{1}{25} + \dots = \sum_{n=1}^{\infty} \frac{1}{n^2} \]</div>
+<p>2.Euler’s Intuition (The Leap of Faith)</p>
+<p>Euler solved this by comparing two different ways to write the function <span class="arithmatex">\(\frac{\sin x}{x}\)</span>:</p>
+<ul>
+<li>
+<p><strong>The Taylor Series Representation:</strong> </p>
+<p>From Unit 10, we know the expansion of <span class="arithmatex">\(\sin x\)</span>:</p>
+<div class="arithmatex">\[ \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \dots \]</div>
+<p>Dividing by <span class="arithmatex">\(x\)</span>, we get:</p>
+<div class="arithmatex">\[ \frac{\sin x}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \dots \]</div>
+</li>
+<li>
+<p><strong>The Infinite Product Representation:</strong> </p>
+<p>Euler noticed that <span class="arithmatex">\(\frac{\sin x}{x} = 0\)</span> precisely when <span class="arithmatex">\(x = \pm \pi, \pm 2\pi, \pm 3\pi, \dots\)</span>. 
+Analogous to how a polynomial <span class="arithmatex">\(P(x)\)</span> with roots <span class="arithmatex">\(r_1, r_2\)</span> can be factored as <span class="arithmatex">\((1 - x/r_1)(1 - x/r_2)\)</span>, he boldly factored the infinite-degree "polynomial" of <span class="arithmatex">\(\sin x / x\)</span> using its roots:</p>
+<div class="arithmatex">\[ \frac{\sin x}{x} = \left(1 - \frac{x^2}{\pi^2}\right)\left(1 - \frac{x^2}{4\pi^2}\right)\left(1 - \frac{x^2}{9\pi^2}\right) \dots \]</div>
+</li>
+</ul>
+<p>3.Comparing the Coefficients
+If you were to expand this infinite product and look only at the <strong><span class="arithmatex">\(x^2\)</span> term</strong>, you would get the sum of all the individual <span class="arithmatex">\(x^2\)</span> parts:</p>
+<div class="arithmatex">\[ \text{Coefficient of } x^2 = -\left( \frac{1}{\pi^2} + \frac{1}{4\pi^2} + \frac{1}{9\pi^2} + \dots \right) = -\frac{1}{\pi^2} \sum_{n=1}^{\infty} \frac{1}{n^2} \]</div>
+<p>From the Taylor series above, we already know the coefficient of <span class="arithmatex">\(x^2\)</span> is <strong><span class="arithmatex">\(-1/3!\)</span></strong> (which is <span class="arithmatex">\(-1/6\)</span>).</p>
+<p>Setting these two coefficients equal:</p>
+<div class="arithmatex">\[ -\frac{1}{\pi^2} \sum_{n=1}^{\infty} \frac{1}{n^2} = -\frac{1}{6} \]</div>
+<p>4.The Final Result</p>
+<div class="arithmatex">\[ \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6} \]</div>
+<p>This result was mind-blowing because it introduced <span class="arithmatex">\(\pi\)</span>—a constant from circles and geometry—into a problem involving pure integers. This not only solved the Basel Problem but also laid the foundation for the <strong>Riemann Zeta Function</strong>, specifically <span class="arithmatex">\(\zeta(2) = \frac{\pi^2}{6}\)</span>.</p>
+<hr />
+<p><strong>Want to see a visual proof?</strong> Check out <a href="https://www.youtube.com/watch?v=d-o3eB9sfls">3Blue1Brown’s geometric solution</a>, which explains this result using the inverse-square law of light without relying on complex series expansions.</p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Extension: The Riemann Zeta Function &amp; The Prime Mystery</p>
+<p>If we replace the real number <span class="arithmatex">\(p\)</span> with a complex variable <span class="arithmatex">\(s\)</span>, we get the <strong>Riemann Zeta Function</strong>:</p>
+<div class="arithmatex">\[ \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} = 1 + \frac{1}{2^s} + \frac{1}{3^s} + \dots \]</div>
+<p>In 1859, Bernhard Riemann discovered a deep connection between the zeros of this function and the distribution of <strong>prime numbers</strong>. </p>
+<p>The <strong>Riemann Hypothesis</strong> conjectures that all "non-trivial" zeros of this function lie on the "critical line" where the real part of <span class="arithmatex">\(s\)</span> is <span class="arithmatex">\(1/2\)</span>. This is one of the seven Millennium Prize Problems; proving it would earn you <strong>$1,000,000</strong> and revolutionize number theory.</p>
+<p>Learn more about it at the <a href="https://www.claymath.org/millennium-problems/riemann-hypothesis">Clay Mathematics Institute</a>.</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
+
+<div id="quiz10-5-1"></div>
+<script>
+  renderMCQ('quiz10-5-1', {
+    title: 'p-Series Shortcut',
+    question: 'Which of the following series is convergent?',
+    options: [
+      'A. <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{1}{n^{0.5}} \\)</span>',
+      'B. <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{1}{n} \\)</span>',
+      'C. <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} \\frac{1}{n^{1.0001}} \\)</span>',
+      'D. <span class="arithmatex">\\( \\sum\\limits_{n=1}^{\\infty} n^{-1} \\)</span>'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! Even if p is only slightly larger than 1 (1.0001), the p-series test guarantees convergence. Options B and D are the same divergent Harmonic series (p=1).",
+      wrong: "Check the value of p. The series only converges if p > 1. Remember that n^-1 is the same as 1/n."
+    }
+  });
+</script>
+
+<div id="quiz10-5-2"></div>
+<script>
+  renderMCQ('quiz10-5-2', {
+    title: 'Cauchy Grouping Concept',
+    question: 'In the grouping proof for the Harmonic series, why do we conclude it diverges?',
+    options: [
+      'A. Because the terms grow larger as n increases.',
+      'B. Because we can show the sum is greater than an infinite sum of 1/2.',
+      'C. Because the common ratio is 1.',
+      'D. Because the terms alternate in sign.'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! By grouping terms like (1/3 + 1/4) and showing they are greater than 1/2, we prove the total sum exceeds an infinite addition of 1/2.",
+      wrong: "Review the proof steps. We grouped the terms to compare the sum to a known divergent behavior."
+    }
+  });
+</script>
 
 
 
