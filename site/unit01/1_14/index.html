@@ -19,7 +19,7 @@
     
     
       
-        <title>1 14 - AP Calculus Notes</title>
+        <title>1.14 Connecting Infinite Limits and Vertical Asymptotes - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#114-connecting-infinite-limits-and-vertical-asymptotes" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 14
+              1.14 Connecting Infinite Limits and Vertical Asymptotes
             
           </span>
         </div>
@@ -784,6 +789,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#infinite-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infinite Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-vertical-asymptotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defining Vertical Asymptotes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining Vertical Asymptotes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-fx-frac1x-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: \(f(x) = \frac{1}{x-2}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-asymptotes-analytically" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding Asymptotes Analytically
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +879,103 @@
   
 
 
-  <h1>1 14</h1>
+<h1 id="114-connecting-infinite-limits-and-vertical-asymptotes">1.14 Connecting Infinite Limits and Vertical Asymptotes</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Infinite Limit 无穷极限</strong> • <strong>Vertical Asymptote 垂直渐近线</strong> </p>
+<p><strong>Unbounded Behavior 无界行为</strong> • <strong>Asymptotic Behavior 渐近行为</strong></p>
+</div>
+<h2 id="infinite-limits">Infinite Limits</h2>
+<p>An <strong>infinite limit</strong> occurs when the values of a function increase or decrease without bound as <span class="arithmatex">\(x\)</span> approaches a specific value <span class="arithmatex">\(c\)</span>. </p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：Infinite Limits (LIM-2.D.1)</p>
+<p>We write <span class="arithmatex">\(\lim\limits_{x \to c} f(x) = \infty\)</span> or <span class="arithmatex">\(\lim\limits_{x \to c} f(x) = -\infty\)</span> to describe the behavior of the function. </p>
+<p><strong>Note:</strong> Technically, if a limit equals <span class="arithmatex">\(\infty\)</span>, the limit still <strong>Does Not Exist (DNE)</strong> because infinity is not a real number. However, using the <span class="arithmatex">\(\infty\)</span> symbol provides more specific information about the function's behavior than just saying "DNE."</p>
+</div>
+<hr />
+<h2 id="defining-vertical-asymptotes">Defining Vertical Asymptotes</h2>
+<p>A vertical asymptote is a vertical line that the graph of a function approaches but never touches as <span class="arithmatex">\(x\)</span> approaches a certain value.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：Vertical Asymptote Definition (LIM-2.D.2)</p>
+<p>The line <span class="arithmatex">\(x = c\)</span> is a <strong>vertical asymptote</strong> of the graph of <span class="arithmatex">\(f\)</span> if the limit from either the left or the right is infinite. That is:</p>
+<div class="arithmatex">\[ \lim_{x \to c^+} f(x) = \pm\infty \quad \text{or} \quad \lim_{x \to c^-} f(x) = \pm\infty \]</div>
+</div>
+<h3 id="example-fx-frac1x-2">Example: <span class="arithmatex">\(f(x) = \frac{1}{x-2}\)</span></h3>
+<p>As <span class="arithmatex">\(x\)</span> approaches <span class="arithmatex">\(2\)</span> from the right, the values of <span class="arithmatex">\(f(x)\)</span> grow larger and larger. As <span class="arithmatex">\(x\)</span> approaches <span class="arithmatex">\(2\)</span> from the left, they become increasingly negative.</p>
+<div class="arithmatex">\[ \lim_{x \to 2^+} \frac{1}{x-2} = \infty, \quad \lim_{x \to 2^-} \frac{1}{x-2} = -\infty \]</div>
+<div id="box_va" style="width:100%; height:400px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_va', {
+      boundingbox: [-2, 10, 6, -10],
+      functions: [
+          {expr: '1/(x-2)', domain: [-5, 1.95], color: '#1f77b4'},
+          {expr: '1/(x-2)', domain: [2.05, 10], color: '#1f77b4'}
+      ],
+      colors: ['#1f77b4', '#1f77b4']
+  });
+</script>
 
+<p>Because at least one of the one-sided limits is infinite, the line <strong><span class="arithmatex">\(x=2\)</span></strong> is a vertical asymptote.</p>
+<hr />
+<h2 id="finding-asymptotes-analytically">Finding Asymptotes Analytically</h2>
+<p>For rational functions, vertical asymptotes typically occur at <span class="arithmatex">\(x\)</span>-values that make the <strong>denominator zero</strong> but the <strong>numerator non-zero</strong>.</p>
+<ol>
+<li>
+<p><strong><span class="arithmatex">\(\frac{0}{0}\)</span> (Indeterminate):</strong> Usually indicates a <strong>hole</strong> (removable discontinuity).</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(\frac{k}{0}\)</span> (where <span class="arithmatex">\(k \neq 0\)</span>):</strong> Indicates an <strong>infinite limit</strong> and therefore a <strong>vertical asymptote</strong>.</p>
+</li>
+</ol>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: One-Sided vs. Two-Sided Infinite Limits</p>
+<p>Consider <span class="arithmatex">\(f(x) = \frac{1}{(x-2)^2}\)</span>. In this case, both the left-hand and right-hand limits approach <span class="arithmatex">\(+\infty\)</span>. </p>
+<div class="arithmatex">\[ \lim_{x \to 2^-} \frac{1}{(x-2)^2} = \infty \quad \text{and} \quad \lim_{x \to 2^+} \frac{1}{(x-2)^2} = \infty \]</div>
+<p>Therefore, we can say the general limit <span class="arithmatex">\(\lim\limits_{x \to 2} \frac{1}{(x-2)^2} = \infty\)</span>. Even though it's still technically DNE, the behavior is consistent from both sides.</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
 
+<div id="quiz1-14-1"></div>
+<script>
+  renderMCQ('quiz1-14-1', {
+    title: 'Interpreting Infinite Limits',
+    question: 'If <span class="arithmatex">\\( \\lim\\limits_{x \\to 3^-} f(x) = \\infty \\)</span>, which of the following must be true?',
+    options: [
+      'A. The limit <span class="arithmatex">\\( \\lim\\limits_{x \\to 3} f(x) \\)</span> exists.',
+      'B. The line <span class="arithmatex">\\( y = 3 \\)</span> is a horizontal asymptote.',
+      'C. The line <span class="arithmatex">\\( x = 3 \\)</span> is a vertical asymptote.',
+      'D. <span class="arithmatex">\\( f(3) = \\infty \\)</span>'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! By definition, if the limit as x approaches a constant from either side is infinite, then that constant represents the location of a vertical asymptote.",
+      wrong: "Check the definition of a vertical asymptote. Does an infinite limit describe a horizontal or vertical line?"
+    }
+  });
+</script>
+
+<div id="quiz1-14-2"></div>
+<script>
+  renderMCQ('quiz1-14-2', {
+    title: 'Asymptote vs. Hole',
+    question: 'Consider the function <span class="arithmatex">\\( f(x) = \\frac{x-1}{x^2-1} \\)</span>. Where does the vertical asymptote occur?',
+    options: [
+      'A. At <span class="arithmatex">\\( x = 1 \\)</span> and <span class="arithmatex">\\( x = -1 \\)</span>',
+      'B. Only at <span class="arithmatex">\\( x = 1 \\)</span>',
+      'C. Only at <span class="arithmatex">\\( x = -1 \\)</span>',
+      'D. There are no vertical asymptotes.'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! Factor the denominator: <span class='arithmatex'>\\( (x-1)(x+1) \\)</span>. The <span class='arithmatex'>\\( (x-1) \\)</span> factor cancels (creating a hole at x=1), but the <span class='arithmatex'>\\( (x+1) \\)</span> remains in the denominator. Since <span class='arithmatex'>\\( f(-1) \\)</span> results in <span class='arithmatex'>\\( k/0 \\)</span>, there is a vertical asymptote at x = -1.",
+      wrong: "Be careful! If a factor cancels out, it creates a hole, not an asymptote. Only the non-cancelling factors in the denominator create vertical asymptotes."
+    }
+  });
+</script>
 
 
 

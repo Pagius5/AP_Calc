@@ -19,7 +19,7 @@
     
     
       
-        <title>1 12 - AP Calculus Notes</title>
+        <title>1.12 Confirming Continuity over an Interval - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#112-confirming-continuity-over-an-interval" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 12
+              1.12 Confirming Continuity over an Interval
             
           </span>
         </div>
@@ -784,6 +789,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#continuity-on-an-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuity on an Interval
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-catalog-of-continuous-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Catalog of Continuous Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-continuity-of-the-square-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Continuity of the Square Root
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +862,101 @@
   
 
 
-  <h1>1 12</h1>
+<h1 id="112-confirming-continuity-over-an-interval">1.12 Confirming Continuity over an Interval</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Interval Continuity 区间连续性</strong> • <strong>Domain 定义域</strong> </p>
+<p><strong>Endpoint Continuity 端点连续性</strong> • <strong>Catalog of Functions 函数类别</strong></p>
+</div>
+<h2 id="continuity-on-an-interval">Continuity on an Interval</h2>
+<p>A function is continuous on an interval if its graph can be drawn without lifting the pencil anywhere within that range. </p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：Continuity on an Interval</p>
+<ol>
+<li>
+<p><strong>Open Interval <span class="arithmatex">\((a, b)\)</span>:</strong> A function <span class="arithmatex">\(f\)</span> is continuous on <span class="arithmatex">\((a, b)\)</span> if it is continuous at every point in the interval.</p>
+</li>
+<li>
+<p><strong>Closed Interval <span class="arithmatex">\([a, b]\)</span>:</strong> A function <span class="arithmatex">\(f\)</span> is continuous on <span class="arithmatex">\([a, b]\)</span> if:</p>
+<ul>
+<li>It is continuous on the open interval <span class="arithmatex">\((a, b)\)</span>.</li>
+<li>It is continuous from the right at <span class="arithmatex">\(a\)</span>: <span class="arithmatex">\(\lim\limits_{x \to a^+} f(x) = f(a)\)</span>.</li>
+<li>It is continuous from the left at <span class="arithmatex">\(b\)</span>: <span class="arithmatex">\(\lim\limits_{x \to b^-} f(x) = f(b)\)</span>.</li>
+</ul>
+</li>
+</ol>
+</div>
+<hr />
+<h2 id="the-catalog-of-continuous-functions">The Catalog of Continuous Functions</h2>
+<p>One of the most important tools in Calculus is knowing which functions are "naturally" continuous. According to <strong>LIM-2.B.2</strong>, the following functions are continuous at every point in their <strong>domains</strong>:</p>
+<ul>
+<li><strong>Polynomials:</strong> (e.g., <span class="arithmatex">\(x^3 - 2x + 1\)</span>) — Continuous on <span class="arithmatex">\((-\infty, \infty)\)</span>.</li>
+<li><strong>Rational Functions:</strong> (e.g., <span class="arithmatex">\(\frac{P(x)}{Q(x)}\)</span>) — Continuous everywhere except where the denominator <span class="arithmatex">\(Q(x) = 0\)</span>.</li>
+<li><strong>Power Functions:</strong> (e.g., <span class="arithmatex">\(x^{2/3}\)</span>, <span class="arithmatex">\(\sqrt{x}\)</span>) — Continuous on their defined domains.</li>
+<li><strong>Exponential &amp; Logarithmic:</strong> (e.g., <span class="arithmatex">\(e^x\)</span>, <span class="arithmatex">\(\ln x\)</span>) — <span class="arithmatex">\(e^x\)</span> is continuous on <span class="arithmatex">\((-\infty, \infty)\)</span>; <span class="arithmatex">\(\ln x\)</span> is continuous on <span class="arithmatex">\((0, \infty)\)</span>.</li>
+<li><strong>Trigonometric Functions:</strong> (e.g., <span class="arithmatex">\(\sin x\)</span>, <span class="arithmatex">\(\cos x\)</span>, <span class="arithmatex">\(\tan x\)</span>) — <span class="arithmatex">\(\sin\)</span> and <span class="arithmatex">\(\cos\)</span> are continuous everywhere; <span class="arithmatex">\(\tan x\)</span> is continuous except at its vertical asymptotes.</li>
+</ul>
+<hr />
+<h2 id="example-continuity-of-the-square-root">Example: Continuity of the Square Root</h2>
+<p>Consider <span class="arithmatex">\(f(x) = \sqrt{x}\)</span>. Its domain is <span class="arithmatex">\([0, \infty)\)</span>. </p>
+<div id="box_sqrt" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_sqrt', {
+      boundingbox: [-1, 4, 10, -1],
+      functions: [{expr: 'sqrt(x)', domain: [0, 20], color: '#1f77b4'}],
+      points: [[0, 0, true]] 
+  });
+</script>
 
+<p>Is it continuous at the endpoint <span class="arithmatex">\(x=0\)</span>? 
+Yes, because <span class="arithmatex">\(\lim\limits_{x \to 0^+} \sqrt{x} = 0\)</span>, which matches <span class="arithmatex">\(f(0)\)</span>. Therefore, we say <span class="arithmatex">\(f(x) = \sqrt{x}\)</span> is continuous on its entire domain <span class="arithmatex">\([0, \infty)\)</span>.</p>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: Continuity vs. Differentiability</p>
+<p>While every function we can differentiate is continuous, not every continuous function can be differentiated. A classic example is <span class="arithmatex">\(f(x) = |x|\)</span>. It is perfectly continuous on <span class="arithmatex">\((-\infty, \infty)\)</span> (you never lift your pencil), but it has a "sharp corner" at <span class="arithmatex">\(x=0\)</span> where the slope is undefined. We will explore this further in Unit 2!</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
 
+<div id="quiz1-12-1"></div>
+<script>
+  renderMCQ('quiz1-12-1', {
+    title: 'Domain and Continuity',
+    question: 'On which of the following intervals is the function <span class="arithmatex">\\( f(x) = \\frac{1}{x-4} \\)</span> continuous?',
+    options: [
+      'A. <span class="arithmatex">\\( [0, 5] \\)</span>',
+      'B. <span class="arithmatex">\\( (4, \\infty) \\)</span>',
+      'C. <span class="arithmatex">\\( (-\\infty, \\infty) \\)</span>',
+      'D. <span class="arithmatex">\\( [4, 10] \\)</span>'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! The function has an infinite discontinuity at x = 4. Therefore, it is continuous on any interval that does not include 4, such as (4, ∞).",
+      wrong: "Check the denominator. Where is the function undefined? Any interval containing that point cannot be an interval of continuity."
+    }
+  });
+</script>
+
+<div id="quiz1-12-2"></div>
+<script>
+  renderMCQ('quiz1-12-2', {
+    title: 'Catalog of Functions',
+    question: 'Which statement is true regarding the function <span class="arithmatex">\\( y = \\ln(x) \\)</span>?',
+    options: [
+      'A. It is continuous on <span class="arithmatex">\\( [0, \\infty) \\)</span>.',
+      'B. It is continuous on <span class="arithmatex">\\( (-\\infty, \\infty) \\)</span>.',
+      'C. It is continuous on its domain, <span class="arithmatex">\\( (0, \\infty) \\)</span>.',
+      'D. It is only continuous at integer values of x.'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! Logarithmic functions are continuous at all points in their domains. Since ln(x) is only defined for x > 0, it is continuous on (0, ∞).",
+      wrong: "Recall the domain of a logarithm. Can you take the log of zero or a negative number?"
+    }
+  });
+</script>
 
 
 

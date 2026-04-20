@@ -19,7 +19,7 @@
     
     
       
-        <title>1 15 - AP Calculus Notes</title>
+        <title>1.15 Connecting Limits at Infinity and Horizontal Asymptotes - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#115-connecting-limits-at-infinity-and-horizontal-asymptotes" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 15
+              1.15 Connecting Limits at Infinity and Horizontal Asymptotes
             
           </span>
         </div>
@@ -784,6 +789,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limits-at-infinity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits at Infinity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits-of-rational-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits of Rational Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limits of Rational Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-fx-frac2x2x21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: \(f(x) = \frac{2x^2}{x^2+1}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relative-magnitudes-and-growth-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relative Magnitudes and Growth Rates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +879,112 @@
   
 
 
-  <h1>1 15</h1>
+<h1 id="115-connecting-limits-at-infinity-and-horizontal-asymptotes">1.15 Connecting Limits at Infinity and Horizontal Asymptotes</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Limits at Infinity 无穷远极限</strong> • <strong>Horizontal Asymptote 水平渐近线</strong> </p>
+<p><strong>End Behavior 终端行为</strong> • <strong>Relative Magnitude 相对量级</strong> • <strong>Growth Rates 增长速率</strong></p>
+</div>
+<h2 id="limits-at-infinity">Limits at Infinity</h2>
+<p>While infinite limits (Section 1.14) describe <span class="arithmatex">\(y\)</span> going to infinity as <span class="arithmatex">\(x\)</span> approaches a number, <strong>limits at infinity</strong> describe what happens to <span class="arithmatex">\(y\)</span> as <span class="arithmatex">\(x\)</span> itself goes to <span class="arithmatex">\(\infty\)</span> or <span class="arithmatex">\(-\infty\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：Horizontal Asymptotes (LIM-2.D.3 &amp; LIM-2.D.4)</p>
+<p>The line <span class="arithmatex">\(y = L\)</span> is a <strong>horizontal asymptote</strong> of the graph of <span class="arithmatex">\(f\)</span> if:</p>
+<div class="arithmatex">\[ \lim_{x \to \infty} f(x) = L \quad \text{or} \quad \lim_{x \to -\infty} f(x) = L \]</div>
+<p>Limits at infinity describe the <strong>end behavior</strong> of a function—where the graph "settles down" as you move far to the left or right.</p>
+</div>
+<hr />
+<h2 id="limits-of-rational-functions">Limits of Rational Functions</h2>
+<p>For rational functions <span class="arithmatex">\(f(x) = \frac{P(x)}{Q(x)}\)</span>, the limit at infinity depends on the <strong>degree</strong> (highest power) of the numerator and denominator:</p>
+<ol>
+<li>
+<p><strong>Bottom-Heavy:</strong> If the degree of the denominator is greater, the limit is <span class="arithmatex">\(0\)</span>.
+    Example: <span class="arithmatex">\(\lim\limits_{x \to \infty} \frac{x+1}{x^2-3} = 0 \implies\)</span> Horizontal Asymptote at <span class="arithmatex">\(y=0\)</span>.</p>
+</li>
+<li>
+<p><strong>Equal Degrees:</strong> If the degrees are the same, the limit is the ratio of the <strong>leading coefficients</strong>.
+    Example: <span class="arithmatex">\(\lim\limits_{x \to \infty} \frac{5x^2+1}{2x^2-3} = \frac{5}{2} \implies\)</span> Horizontal Asymptote at <span class="arithmatex">\(y=2.5\)</span>.</p>
+</li>
+<li>
+<p><strong>Top-Heavy:</strong> If the degree of the numerator is greater, the limit is <span class="arithmatex">\(\infty\)</span> or <span class="arithmatex">\(-\infty\)</span> (no horizontal asymptote).</p>
+</li>
+</ol>
+<h3 id="example-fx-frac2x2x21">Example: <span class="arithmatex">\(f(x) = \frac{2x^2}{x^2+1}\)</span></h3>
+<p>As <span class="arithmatex">\(x \to \infty\)</span>, the <span class="arithmatex">\(x^2\)</span> terms dominate, and the function approaches <span class="arithmatex">\(2/1 = 2\)</span>.</p>
+<div id="box_ha" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_ha', {
+      boundingbox: [-10, 3, 10, -1],
+      functions: [
+          {expr: '(2*x^2)/(x^2+1)', domain: [-20, 20], color: '#1f77b4'},
+          {expr: '2', domain: [-20, 20], color: '#d62728'} // The Asymptote line
+      ],
+      colors: ['#1f77b4', '#d62728']
+  });
+</script>
 
+<hr />
+<h2 id="relative-magnitudes-and-growth-rates">Relative Magnitudes and Growth Rates</h2>
+<p>According to <strong>LIM-2.D.5</strong>, we can determine limits at infinity by comparing how fast functions grow. Some functions grow much faster than others as <span class="arithmatex">\(x \to \infty\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：Hierarchy of Growth Rates</p>
+<p>As <span class="arithmatex">\(x \to \infty\)</span>, the following list ranks common functions from <strong>slowest growing</strong> to <strong>fastest growing</strong>:</p>
+<div class="arithmatex">\[ \ln(x) \ll x^n \ll e^x \ll x! \ll x^x \]</div>
+<ul>
+<li><strong>Logs</strong> are the slowest.</li>
+<li><strong>Polynomials</strong> are in the middle (higher degrees grow faster).</li>
+<li><strong>Exponentials</strong> grow faster than any polynomial.</li>
+</ul>
+</div>
+<p><strong>Example:</strong> Evaluate <span class="arithmatex">\(\lim\limits_{x \to \infty} \frac{x^{100}}{e^x}\)</span>. 
+Even though <span class="arithmatex">\(x^{100}\)</span> seems huge, <span class="arithmatex">\(e^x\)</span> grows exponentially faster. Therefore, the denominator will eventually dwarf the numerator, and the limit is <strong><span class="arithmatex">\(0\)</span></strong>.</p>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: Can a graph cross its asymptote?</p>
+<p>A common misconception is that a graph can <em>never</em> cross an asymptote. While this is usually true for vertical asymptotes, a graph <strong>can</strong> cross a horizontal asymptote many times. A horizontal asymptote only describes what happens as <span class="arithmatex">\(x\)</span> becomes extremely large; it doesn't restrict the function's behavior near the origin.</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
 
+<div id="quiz1-15-1"></div>
+<script>
+  renderMCQ('quiz1-15-1', {
+    title: 'Rational Function End Behavior',
+    question: 'Find the horizontal asymptote of the function <span class="arithmatex">\\( f(x) = \\frac{4x^3 - 2x + 1}{x^3 + 9} \\)</span>.',
+    options: [
+      'A. <span class="arithmatex">\\( y = 0 \\)</span>',
+      'B. <span class="arithmatex">\\( y = 4 \\)</span>',
+      'C. <span class="arithmatex">\\( y = 1/9 \\)</span>',
+      'D. No horizontal asymptote'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! Since the degrees of the numerator and denominator are both 3, the limit is the ratio of the leading coefficients: 4/1 = 4.",
+      wrong: "Compare the highest powers in the numerator and denominator. Since they are the same, look at the coefficients of those terms."
+    }
+  });
+</script>
+
+<div id="quiz1-15-2"></div>
+<script>
+  renderMCQ('quiz1-15-2', {
+    title: 'Comparing Growth Rates',
+    question: 'Evaluate <span class="arithmatex">\\( \\lim\\limits_{x \\to \\infty} \\frac{\\ln(x^5)}{x} \\)</span>.',
+    options: [
+      'A. <span class="arithmatex">\\( 0 \\)</span>',
+      'B. <span class="arithmatex">\\( 5 \\)</span>',
+      'C. <span class="arithmatex">\\( \\infty \\)</span>',
+      'D. <span class="arithmatex">\\( 1 \\)</span>'
+    ],
+    correctIndex: 0, 
+    feedback: {
+      correct: "Correct! Even though the numerator is <span class='arithmatex'>\\( 5\\ln(x) \\)</span>, logarithmic functions grow much slower than power functions like <span class='arithmatex'>\\( x \\)</span>. Therefore, the denominator dominates, and the limit is 0.",
+      wrong: "Recall the hierarchy of growth rates. Does a log function grow faster or slower than a linear function as x goes to infinity?"
+    }
+  });
+</script>
 
 
 

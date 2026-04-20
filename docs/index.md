@@ -13,7 +13,7 @@
 ### 1. The Historical Paradox
 Calculus is the mathematical study of **change and infinity**.
 
-??? info "Extension: Etymology"
+??? tip "Extension: Etymology"
     Both *calculus* and *calculation* share the same Latin root *calculus* (small pebble), used by Romans for counting. While "calculation" became a general term for arithmetic, "Calculus" was adopted in the 17th century to describe the specific "method of calculation" involving infinitesimals.
     
     Even today, dentists and doctors use "calculus" to refer to stone-like deposits on teeth (dental calculus) or in kidneys (kidney stone or renal calculus) !
@@ -52,7 +52,7 @@ In almost any calculus course, calculus is taught in this sequence:
 
 We study limits first to provide a solid, modern foundation for the brilliant intuitive discoveries made hundreds of years ago.
 
-??? info "Extension: Calculus & Analysis"
+??? tip "Extension: Calculus & Analysis"
     * **Calculus** is the **operational** toolset. It focuses on the "how"—the rules, formulas, and techniques used to calculate slopes, areas, and volumes. It is the language of engineers and physicists who need to solve real-world problems.
     
     * **Analysis** is the **theoretical** foundation. It focuses on the "why"—the rigorous proof and logical structure behind Calculus. It investigates the nature of real numbers, the formal definition of limits ($\epsilon$-$\delta$ proofs), and the conditions under which functions behave predictably.
@@ -129,18 +129,18 @@ This site will cover all the topics with an emphasis on AP Calc BC.
   <p style="font-size: 0.9em;"><strong>📄 <a href="https://apcentral.collegeboard.org/media/pdf/ap-calculus-ab-and-bc-course-and-exam-description.pdf">AP Calculus Exam Description PDF</a></strong></p>
 </div>
 
-| Units | Exam Weighting (AB) | Exam Weighting (BC) |
-| :--- | :---: | :---: |
-| **Unit 1:** Limits and Continuity | **10–12%** | **4–7%** |
-| **Unit 2:** Differentiation: Definition and Fundamental Properties | **10–12%** | **4–7%** |
-| **Unit 3:** Differentiation: Composite, Implicit, and Inverse Functions | **9–13%** | **4–7%** |
-| **Unit 4:** Contextual Applications of Differentiation | **10–15%** | **6–9%** |
-| **Unit 5:** Analytical Applications of Differentiation | **15–18%** | **8–11%** |
-| **Unit 6:** Integration and Accumulation of Change | **17–20%** | **17–20%** |
-| **Unit 7:** Differential Equations | **6–12%** | **6–9%** |
-| **Unit 8:** Applications of Integration | **10–15%** | **6–9%** |
-| **Unit 9:** Parametric Equations, Polar Coordinates, and Vector-Valued Functions **BC ONLY** | | **11–12%** |
-| **Unit 10:** Infinite Sequences and Series **BC ONLY** | | **17–18%** |
+| Units                                                                                        | Exam Weighting (AB) | Exam Weighting (BC) |
+| :------------------------------------------------------------------------------------------- | :-----------------: | :-----------------: |
+| **Unit 1:** Limits and Continuity                                                            |     **10–12%**      |      **4–7%**       |
+| **Unit 2:** Differentiation: Definition and Fundamental Properties                           |     **10–12%**      |      **4–7%**       |
+| **Unit 3:** Differentiation: Composite, Implicit, and Inverse Functions                      |      **9–13%**      |      **4–7%**       |
+| **Unit 4:** Contextual Applications of Differentiation                                       |     **10–15%**      |      **6–9%**       |
+| **Unit 5:** Analytical Applications of Differentiation                                       |     **15–18%**      |      **8–11%**      |
+| **Unit 6:** Integration and Accumulation of Change                                           |     **17–20%**      |     **17–20%**      |
+| **Unit 7:** Differential Equations                                                           |      **6–12%**      |      **6–9%**       |
+| **Unit 8:** Applications of Integration                                                      |     **10–15%**      |      **6–9%**       |
+| **Unit 9:** Parametric Equations, Polar Coordinates, and Vector-Valued Functions **BC ONLY** |                     |     **11–12%**      |
+| **Unit 10:** Infinite Sequences and Series **BC ONLY**                                       |                     |     **17–18%**      |
 
 ---
 

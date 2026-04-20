@@ -19,7 +19,7 @@
     
     
       
-        <title>1 4 - AP Calculus Notes</title>
+        <title>1.4 Estimating Limit Values from Tables - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#14-estimating-limit-values-from-tables" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 4
+              1.4 Estimating Limit Values from Tables
             
           </span>
         </div>
@@ -784,6 +789,83 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-numerical-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Numerical Approach
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Numerical Approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-construct-a-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Construct a Table
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Construct a Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-estimating-limlimits_x-to-0-fracsin-xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Estimating \(\lim\limits_{x \to 0} \frac{\sin x}{x}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-tables-signal-dne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When Tables Signal "DNE"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +885,138 @@
   
 
 
-  <h1>1 4</h1>
+<h1 id="14-estimating-limit-values-from-tables">1.4 Estimating Limit Values from Tables</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Numerical Estimation 数值估值</strong> • <strong>Table of Values 数值表</strong> </p>
+<p><strong>Convergence 收敛</strong> • <strong>Step Size 步长</strong> • <strong>Approaching 趋近</strong></p>
+</div>
+<h2 id="the-numerical-approach">The Numerical Approach</h2>
+<p>When a graph is not available and analytical methods are too complex, we can use a <strong>table of values</strong> to estimate the limit. By choosing <span class="arithmatex">\(x\)</span>-values that get progressively closer to <span class="arithmatex">\(c\)</span> from both the left and the right, we can observe the trend of <span class="arithmatex">\(f(x)\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Core Concept: The Logic of Numerical Estimation</p>
+<p>Numerical information is a powerful tool for estimating limits. To estimate <span class="arithmatex">\(\lim\limits_{x \to c} f(x)\)</span>, we examine the behavior of <span class="arithmatex">\(f(x)\)</span> as <span class="arithmatex">\(x\)</span> gets arbitrarily close to <span class="arithmatex">\(c\)</span> from both sides.</p>
+</div>
+<h3 id="how-to-construct-a-table">How to Construct a Table</h3>
+<p>To estimate <span class="arithmatex">\(\lim\limits_{x \to c} f(x)\)</span>, you should create two sets of <span class="arithmatex">\(x\)</span>-values that "sandwich" the target value <span class="arithmatex">\(c\)</span>:</p>
+<ol>
+<li>
+<p><strong>Approach from the left (<span class="arithmatex">\(x \to c^-\)</span>):</strong> Choose values such as <span class="arithmatex">\(c-0.1, c-0.01, c-0.001\)</span>.</p>
+</li>
+<li>
+<p><strong>Approach from the right (<span class="arithmatex">\(x \to c^+\)</span>):</strong> Choose values such as <span class="arithmatex">\(c+0.1, c+0.01, c+0.001\)</span>.</p>
+</li>
+</ol>
+<h4 id="example-estimating-limlimits_x-to-0-fracsin-xx">Example: Estimating <span class="arithmatex">\(\lim\limits_{x \to 0} \frac{\sin x}{x}\)</span></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><span class="arithmatex">\(x\)</span> (from left)</th>
+<th style="text-align: left;"><span class="arithmatex">\(f(x)\)</span></th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"><span class="arithmatex">\(x\)</span> (from right)</th>
+<th style="text-align: left;"><span class="arithmatex">\(f(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(-0.1\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.99833\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.1\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.99833\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(-0.01\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.99998\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.01\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.99998\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(-0.001\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.99999\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.001\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.99999\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observation:</strong> As <span class="arithmatex">\(x\)</span> approaches <span class="arithmatex">\(0\)</span> from both sides, <span class="arithmatex">\(f(x)\)</span> clearly settles toward <span class="arithmatex">\(1\)</span>. Therefore, we estimate <span class="arithmatex">\(\lim\limits_{x \to 0} \frac{\sin x}{x} = 1\)</span>.</p>
+<div id="box_table_graph" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_table_graph', {
+      boundingbox: [-4, 2, 4, -1],
+      functions: [{expr: 'sin(x)/x', domain: [-10, 10]}],
+      points: [[0, 1, false]] 
+  });
+</script>
 
+<hr />
+<h2 id="when-tables-signal-dne">When Tables Signal "DNE"</h2>
+<p>A table of values can help identify cases where the limit <strong>Does Not Exist (DNE)</strong>:</p>
+<ol>
+<li>
+<p><strong>Different Left and Right Trends:</strong> 
+    The values from the left approach a number <span class="arithmatex">\(L\)</span>, while values from the right approach a different number <span class="arithmatex">\(R\)</span>.</p>
+</li>
+<li>
+<p><strong>Unbounded Behavior:</strong> 
+    As <span class="arithmatex">\(x\)</span> approaches <span class="arithmatex">\(c\)</span>, the values of <span class="arithmatex">\(f(x)\)</span> grow without bound (e.g., <span class="arithmatex">\(100, 1000, 10000 \dots\)</span>), indicating a vertical asymptote.</p>
+</li>
+<li>
+<p><strong>Oscillating Behavior:</strong> 
+    The values of <span class="arithmatex">\(f(x)\)</span> fluctuate wildly between different numbers even as the distance between <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(c\)</span> becomes very small.</p>
+</li>
+</ol>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Math Extension: From Intuition to Rigor (<span class="arithmatex">\(\epsilon-\delta\)</span>)</p>
+<p>While tables provide an intuitive "feel" for limits, they are not formal proofs. In the 19th century, mathematicians like Karl Weierstrass formalized this using the <strong><span class="arithmatex">\(\epsilon-\delta\)</span> definition</strong>.</p>
+<p>To say <span class="arithmatex">\(\lim\limits_{x \to c} f(x) = L\)</span> means that for every <span class="arithmatex">\(\epsilon &gt; 0\)</span> (no matter how small a "target error" you set for <span class="arithmatex">\(y\)</span>), there exists a <span class="arithmatex">\(\delta &gt; 0\)</span> (a specific distance around <span class="arithmatex">\(x=c\)</span>) such that whenever <span class="arithmatex">\(x\)</span> is within <span class="arithmatex">\(\delta\)</span> of <span class="arithmatex">\(c\)</span> (and <span class="arithmatex">\(x \neq c\)</span>), <span class="arithmatex">\(f(x)\)</span> is guaranteed to be within <span class="arithmatex">\(\epsilon\)</span> of <span class="arithmatex">\(L\)</span>. </p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
 
+<div id="quiz1-4-1"></div>
+<script>
+  renderMCQ('quiz1-4-1', {
+    title: 'Numerical Estimation Practice',
+    question: 'Based on the following table, what is the best estimate for <span class="arithmatex">\\( \\lim\\limits_{x \\to 3} f(x) \\)</span>?<br><br><div style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; text-align: center; border: 1px solid #ddd;"><tr style="background-color: #f8f9fa;"><th style="padding: 10px; border: 1px solid #ddd;">x</th><td style="padding: 10px; border: 1px solid #ddd;">2.9</td><td style="padding: 10px; border: 1px solid #ddd;">2.99</td><td style="padding: 10px; border: 1px solid #ddd;">2.999</td><td style="padding: 10px; border: 1px solid #ddd;">3.001</td><td style="padding: 10px; border: 1px solid #ddd;">3.01</td><td style="padding: 10px; border: 1px solid #ddd;">3.1</td></tr><tr><th style="padding: 10px; border: 1px solid #ddd;">f(x)</th><td style="padding: 10px; border: 1px solid #ddd;">4.85</td><td style="padding: 10px; border: 1px solid #ddd;">4.98</td><td style="padding: 10px; border: 1px solid #ddd;">4.999</td><td style="padding: 10px; border: 1px solid #ddd;">5.001</td><td style="padding: 10px; border: 1px solid #ddd;">5.02</td><td style="padding: 10px; border: 1px solid #ddd;">5.15</td></tr></table></div>',
+    options: [
+      'A. <span class="arithmatex">\\( 3 \\)</span>',
+      'B. <span class="arithmatex">\\( 4.9 \\)</span>',
+      'C. <span class="arithmatex">\\( 5 \\)</span>',
+      'D. Does Not Exist (DNE)'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! As x approaches 3 from both 2.999 and 3.001, f(x) is converging toward 5.",
+      wrong: "Check the trend of f(x). As x gets closer to 3, does f(x) seem to settle on a specific integer?"
+    }
+  });
+</script>
+
+<div id="quiz1-4-2"></div>
+<script>
+  renderMCQ('quiz1-4-2', {
+    title: 'Identifying Abnormal Behavior',
+    question: 'Analyze the table below. What can you conclude about <span class="arithmatex">\\( \\lim\\limits_{x \\to 0} h(x) \\)</span>?<br><br><div style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; text-align: center; border: 1px solid #ddd;"><tr style="background-color: #f8f9fa;"><th style="padding: 10px; border: 1px solid #ddd;">x</th><td style="padding: 10px; border: 1px solid #ddd;">-0.1</td><td style="padding: 10px; border: 1px solid #ddd;">-0.01</td><td style="padding: 10px; border: 1px solid #ddd;">0.01</td><td style="padding: 10px; border: 1px solid #ddd;">0.1</td></tr><tr><th style="padding: 10px; border: 1px solid #ddd;">h(x)</th><td style="padding: 10px; border: 1px solid #ddd;">-10</td><td style="padding: 10px; border: 1px solid #ddd;">-1000</td><td style="padding: 10px; border: 1px solid #ddd;">1000</td><td style="padding: 10px; border: 1px solid #ddd;">10</td></tr></table></div>',
+    options: [
+      'A. The limit is <span class="arithmatex">\\( 0 \\)</span>',
+      'B. The limit is <span class="arithmatex">\\( \\infty \\)</span>',
+      'C. Does Not Exist (DNE)',
+      'D. The limit is <span class="arithmatex">\\( 1000 \\)</span>'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! The values are increasing in magnitude but in opposite directions (negative infinity from the left, positive infinity from the right). This unbounded behavior confirms the limit DNE.",
+      wrong: "Notice the magnitude of the values. As x gets smaller, h(x) is not settling on a constant; it is 'exploding' to very large positive and negative values."
+    }
+  });
+</script>
 
 
 

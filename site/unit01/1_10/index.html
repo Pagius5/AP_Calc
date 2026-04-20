@@ -19,7 +19,7 @@
     
     
       
-        <title>1 10 - AP Calculus Notes</title>
+        <title>1.10 Exploring Types of Discontinuities - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#110-exploring-types-of-discontinuities" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 10
+              1.10 Exploring Types of Discontinuities
             
           </span>
         </div>
@@ -784,6 +789,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-discontinuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Discontinuity?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-removable-discontinuity-holes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Removable Discontinuity (Holes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-jump-discontinuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Jump Discontinuity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-infinite-discontinuity-vertical-asymptotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Infinite Discontinuity (Vertical Asymptotes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +873,126 @@
   
 
 
-  <h1>1 10</h1>
+<h1 id="110-exploring-types-of-discontinuities">1.10 Exploring Types of Discontinuities</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Removable Discontinuity 可去间断点 (Hole)</strong> • <strong>Jump Discontinuity 跳跃间断点</strong> </p>
+<p><strong>Infinite Discontinuity 无穷间断点 (Vertical Asymptote)</strong> • <strong>Continuous 连续</strong></p>
+</div>
+<h2 id="what-is-a-discontinuity">What is a Discontinuity?</h2>
+<p>A function is discontinuous at a point <span class="arithmatex">\(x=c\)</span> if there is any "break," "hole," or "gap" in the graph at that point. Formally, if a function is not continuous, it must fall into one of the three categories below.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：Three Types of Discontinuity</p>
+<ol>
+<li>
+<p><strong>Removable Discontinuity (Hole):</strong> 
+    The limit <span class="arithmatex">\(\lim\limits_{x \to c} f(x)\)</span> exists, but it does not equal the function value <span class="arithmatex">\(f(c)\)</span> (either <span class="arithmatex">\(f(c)\)</span> is undefined or it is defined at a different height).</p>
+</li>
+<li>
+<p><strong>Jump Discontinuity:</strong> 
+    The one-sided limits <span class="arithmatex">\(\lim\limits_{x \to c^-} f(x)\)</span> and <span class="arithmatex">\(\lim\limits_{x \to c^+} f(x)\)</span> both exist as finite numbers, but they are not equal.</p>
+</li>
+<li>
+<p><strong>Infinite Discontinuity:</strong> 
+    The function values grow without bound as <span class="arithmatex">\(x\)</span> approaches <span class="arithmatex">\(c\)</span> from one or both sides (creating a Vertical Asymptote).</p>
+</li>
+</ol>
+</div>
+<hr />
+<h2 id="1-removable-discontinuity-holes">1. Removable Discontinuity (Holes)</h2>
+<p>Algebraically, these occur when a factor in the denominator cancels out with a factor in the numerator (the <span class="arithmatex">\(0/0\)</span> case we saw in Section 1.6).</p>
+<div id="box_removable" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_removable', {
+      boundingbox: [-1, 5, 5, -1],
+      functions: [{expr: '(x^2 - 4)/(x - 2)', domain: [-5, 5]}],
+      points: [
+          [2, 4, false], // Hole
+          [2, 1, true]   // Displaced point
+      ]
+  });
+</script>
 
+<p>In the graph above, <span class="arithmatex">\(\lim\limits_{x \to 2} f(x) = 4\)</span>, but <span class="arithmatex">\(f(2) = 1\)</span>. Because the limit exists but doesn't match the point, it is <strong>removable</strong>.</p>
+<hr />
+<h2 id="2-jump-discontinuity">2. Jump Discontinuity</h2>
+<p>These are most common in <strong>piecewise functions</strong>. The graph literally "jumps" from one <span class="arithmatex">\(y\)</span>-value to another at <span class="arithmatex">\(x=c\)</span>.</p>
+<div id="box_jump" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script>
+  renderMathGraph('box_jump', {
+      boundingbox: [-1, 4, 5, -1],
+      functions: [
+          {expr: 'x + 1', domain: [-5, 2]},
+          {expr: 'x - 1', domain: [2, 10]}
+      ],
+      colors: ['#1f77b4', '#1f77b4'], 
+      points: [
+          [2, 3, true],  // Left branch ends at y=3
+          [2, 1, false]  // Right branch starts at y=1
+      ]
+  });
+</script>
 
+<p>Here, <span class="arithmatex">\(\lim\limits_{x \to 2^-} f(x) = 3\)</span> and <span class="arithmatex">\(\lim\limits_{x \to 2^+} f(x) = 1\)</span>. Since <span class="arithmatex">\(3 \neq 1\)</span>, the general limit does not exist.</p>
+<hr />
+<h2 id="3-infinite-discontinuity-vertical-asymptotes">3. Infinite Discontinuity (Vertical Asymptotes)</h2>
+<p>Algebraically, these occur when the denominator approaches <span class="arithmatex">\(0\)</span> but the numerator approaches a non-zero constant (the <span class="arithmatex">\(k/0\)</span> case).</p>
+<div id="box_infinite" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script>
+  renderMathGraph('box_infinite', {
+      boundingbox: [-1, 10, 5, -10],
+      functions: [{expr: '1/(x - 2)', domain: [-5, 5]}]
+  });
+</script>
+
+<p>At <span class="arithmatex">\(x=2\)</span>, the function shoots off to <span class="arithmatex">\(+\infty\)</span> from the right and <span class="arithmatex">\(-\infty\)</span> from the left.</p>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: Why "Removable"?</p>
+<p>The term "removable" is used because you could make the function continuous just by redefining a single point. If you "plug the hole" by setting <span class="arithmatex">\(f(c) = L\)</span>, the discontinuity vanishes. In contrast, you cannot make a Jump or Infinite discontinuity continuous by changing just one point—you would have to shift the entire branch of the graph!</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
+
+<div id="quiz1-10-1"></div>
+<script>
+  renderMCQ('quiz1-10-1', {
+    title: 'Identifying Discontinuity Types',
+    question: 'A function <span class="arithmatex">\\( g(x) \\)</span> is defined as follows: <br> <span class="arithmatex">\\( \\lim\\limits_{x \\to 5^-} g(x) = 10 \\)</span> <br> <span class="arithmatex">\\( \\lim\\limits_{x \\to 5^+} g(x) = 10 \\)</span> <br> <span class="arithmatex">\\( g(5) \\)</span> is undefined. <br> What type of discontinuity is at <span class="arithmatex">\\( x = 5 \\)</span>?',
+    options: [
+      'A. Jump Discontinuity',
+      'B. Removable Discontinuity (Hole)',
+      'C. Infinite Discontinuity',
+      'D. The function is continuous'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! Because the limit exists (both sides approach 10) but the function is undefined there, it is a removable discontinuity.",
+      wrong: "Check the definition of a Hole. If the left and right limits are the same, can it be a Jump?"
+    }
+  });
+</script>
+
+<div id="quiz1-10-2"></div>
+<script>
+  renderMCQ('quiz1-10-2', {
+    title: 'Algebraic Identification',
+    question: 'Consider <span class="arithmatex">\\( f(x) = \\frac{x+3}{x^2-9} \\)</span>. What type of discontinuity occurs at <span class="arithmatex">\\( x = 3 \\)</span>?',
+    options: [
+      'A. Removable Discontinuity',
+      'B. Jump Discontinuity',
+      'C. Infinite Discontinuity (Vertical Asymptote)',
+      'D. No discontinuity'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! If we factor: <span class='arithmatex'>\\( \\frac{x+3}{(x+3)(x-3)} = \\frac{1}{x-3} \\)</span>. While there is a hole at <span class='arithmatex'>\\( x = -3 \\)</span>, at <span class='arithmatex'>\\( x = 3 \\)</span> we have a non-zero numerator over zero, which indicates a vertical asymptote.",
+      wrong: "Factor the denominator. Does the factor (x-3) cancel out or stay in the denominator?"
+    }
+  });
+</script>
 
 
 

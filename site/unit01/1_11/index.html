@@ -19,7 +19,7 @@
     
     
       
-        <title>1 11 - AP Calculus Notes</title>
+        <title>1.11 Defining Continuity at a Point - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#111-defining-continuity-at-a-point" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 11
+              1.11 Defining Continuity at a Point
             
           </span>
         </div>
@@ -784,6 +789,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-mathematical-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Mathematical Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-the-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizing the Conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#piecewise-continuity-solving-for-a-constant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Piecewise Continuity: Solving for a Constant
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +862,113 @@
   
 
 
-  <h1>1 11</h1>
+<h1 id="111-defining-continuity-at-a-point">1.11 Defining Continuity at a Point</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Continuity 连续性</strong> • <strong>Existence 存在性</strong> </p>
+<p><strong>Point Discontinuity 点间断</strong> • <strong>Three-Step Test 连续性三步检验</strong></p>
+</div>
+<h2 id="the-mathematical-definition">The Mathematical Definition</h2>
+<p>A function <span class="arithmatex">\(f(x)\)</span> is continuous at a point <span class="arithmatex">\(x=c\)</span> if the graph is "unbroken" there. However, to prove this analytically, we must satisfy three specific conditions.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：The Three Conditions of Continuity</p>
+<p>A function <span class="arithmatex">\(f(x)\)</span> is <strong>continuous at <span class="arithmatex">\(x=c\)</span></strong> if and only if:</p>
+<ol>
+<li>
+<p><strong><span class="arithmatex">\(f(c)\)</span> exists.</strong> (The function is defined at <span class="arithmatex">\(c\)</span>; there is no hole or asymptote at the point).</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(\lim\limits_{x \to c} f(x)\)</span> exists.</strong> (The left-hand limit equals the right-hand limit).</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(\lim\limits_{x \to c} f(x) = f(c)\)</span>.</strong> (The limit matches the actual function value).</p>
+</li>
+</ol>
+</div>
+<p>If <strong>any</strong> of these three conditions are not met, the function is discontinuous at <span class="arithmatex">\(x=c\)</span>.</p>
+<hr />
+<h2 id="visualizing-the-conditions">Visualizing the Conditions</h2>
+<p>Let's look at a function that <strong>is</strong> continuous at <span class="arithmatex">\(x = 2\)</span>.</p>
+<div id="box_continuous" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_continuous', {
+      boundingbox: [-1, 5, 5, -1],
+      functions: [{expr: 'x', domain: [-5, 10], color: '#1f77b4'}],
+      points: [[2, 2, true]] 
+  });
+</script>
 
+<ul>
+<li><strong>Condition 1:</strong> <span class="arithmatex">\(f(2) = 2\)</span> (The solid point exists).</li>
+<li><strong>Condition 2:</strong> <span class="arithmatex">\(\lim\limits_{x \to 2} f(x) = 2\)</span> (The path from both sides leads to <span class="arithmatex">\(y=2\)</span>).</li>
+<li><strong>Condition 3:</strong> The limit (<span class="arithmatex">\(2\)</span>) equals the point (<span class="arithmatex">\(2\)</span>).</li>
+<li><strong>Result:</strong> Continuous at <span class="arithmatex">\(x=2\)</span>.</li>
+</ul>
+<hr />
+<h2 id="piecewise-continuity-solving-for-a-constant">Piecewise Continuity: Solving for a Constant</h2>
+<p>A classic AP-style problem asks you to find a value for a constant (like <span class="arithmatex">\(k\)</span>) that makes a piecewise function continuous.</p>
+<p><strong>Example:</strong> Find the value of <span class="arithmatex">\(k\)</span> that makes <span class="arithmatex">\(f(x)\)</span> continuous at <span class="arithmatex">\(x=3\)</span>:
+$$ f(x) = \begin{cases} x^2 - 1, &amp; x \le 3 \ kx + 2, &amp; x &gt; 3 \end{cases} $$</p>
+<p>To be continuous, the limit from the left must equal the limit from the right:</p>
+<ol>
+<li>
+<p><strong>Left-hand limit:</strong> <span class="arithmatex">\(\lim\limits_{x \to 3^-} (x^2 - 1) = 3^2 - 1 = 8\)</span>.</p>
+</li>
+<li>
+<p><strong>Right-hand limit:</strong> <span class="arithmatex">\(\lim\limits_{x \to 3^+} (kx + 2) = 3k + 2\)</span>.</p>
+</li>
+<li>
+<p><strong>Set them equal:</strong> <span class="arithmatex">\(8 = 3k + 2 \implies 6 = 3k \implies k = 2\)</span>.</p>
+</li>
+</ol>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: Continuity on an Interval</p>
+<p>We say a function is continuous on an <strong>open interval</strong> <span class="arithmatex">\((a, b)\)</span> if it is continuous at every point in that interval. For a <strong>closed interval</strong> <span class="arithmatex">\([a, b]\)</span>, we also check the endpoints using one-sided limits: 
+<span class="arithmatex">\(\lim\limits_{x \to a^+} f(x) = f(a)\)</span> and <span class="arithmatex">\(\lim\limits_{x \to b^-} f(x) = f(b)\)</span>.</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
 
+<div id="quiz1-11-1"></div>
+<script>
+  renderMCQ('quiz1-11-1', {
+    title: 'Testing Continuity Conditions',
+    question: 'A function <span class="arithmatex">\\( f(x) \\)</span> has a hole at <span class="arithmatex">\\( x = 4 \\)</span> at a height of <span class="arithmatex">\\( y = 7 \\)</span>, but <span class="arithmatex">\\( f(4) = 2 \\)</span>. Which condition of continuity fails?',
+    options: [
+      'A. Condition 1: <span class="arithmatex">\\( f(4) \\)</span> does not exist.',
+      'B. Condition 2: <span class="arithmatex">\\( \\lim\\limits_{x \\to 4} f(x) \\)</span> does not exist.',
+      'C. Condition 3: <span class="arithmatex">\\( \\lim\\limits_{x \\to 4} f(x) \\neq f(4) \\)</span>.',
+      'D. All conditions are satisfied.'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! <span class='arithmatex'>\\( f(4) \\)</span> exists (it is 2) and the limit exists (it is 7), but they are not equal to each other.",
+      wrong: "Check the values given. Does the point exist? Does the limit exist? Do they match?"
+    }
+  });
+</script>
+
+<div id="quiz1-11-2"></div>
+<script>
+  renderMCQ('quiz1-11-2', {
+    title: 'Solving for Continuity',
+    question: 'For what value of <span class="arithmatex">\\( k \\)</span> is the function <span class="arithmatex">\\( g(x) = \\begin{cases} kx + 5, & x < 2 \\\\ x^2 - k, & x \\ge 2 \\end{cases} \\)</span> continuous at <span class="arithmatex">\\( x = 2 \\)</span>?',
+    options: [
+      'A. <span class="arithmatex">\\( k = -1/3 \\)</span>',
+      'B. <span class="arithmatex">\\( k = 1 \\)</span>',
+      'C. <span class="arithmatex">\\( k = -3 \\)</span>',
+      'D. <span class="arithmatex">\\( k = 0 \\)</span>'
+    ],
+    correctIndex: 0, 
+    feedback: {
+      correct: "Correct! Set the two pieces equal at <span class='arithmatex'>\\( x=2 \\)</span>: <br> <span class='arithmatex'>\\( 2k + 5 = 2^2 - k \\)</span> <br> <span class='arithmatex'>\\( 2k + 5 = 4 - k \\)</span> <br> <span class='arithmatex'>\\( 3k = -1 \\implies k = -1/3 \\)</span>.",
+      wrong: "Set the left-hand limit equal to the right-hand limit at x = 2 and solve for k."
+    }
+  });
+</script>
 
 
 

@@ -19,7 +19,7 @@
     
     
       
-        <title>1 8 - AP Calculus Notes</title>
+        <title>1.8 Determining Limits Using the Squeeze Theorem - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#18-determining-limits-using-the-squeeze-theorem" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 8
+              1.8 Determining Limits Using the Squeeze Theorem
             
           </span>
         </div>
@@ -784,6 +789,121 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-squeeze-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Squeeze Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-the-squeeze" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizing the Squeeze
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-1-lim_x-to-0-fracsin-xx-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proof 1: \(\lim_{x \to 0} \frac{\sin x}{x} = 1\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proof 1: \(\lim_{x \to 0} \frac{\sin x}{x} = 1\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-the-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Inequality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-the-squeeze" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The Squeeze
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-2-lim_x-to-0-frac1-cos-xx-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proof 2: \(\lim_{x \to 0} \frac{1 - \cos x}{x} = 0\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-special-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of Special Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +923,145 @@
   
 
 
-  <h1>1 8</h1>
+<h1 id="18-determining-limits-using-the-squeeze-theorem">1.8 Determining Limits Using the Squeeze Theorem</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Squeeze Theorem (Sandwich Theorem) 夹逼定理</strong> • <strong>Geometric Proof 几何证明</strong> </p>
+<p><strong>Unit Circle 单位圆</strong> • <strong>Indeterminate Trig Limits 三角不定式</strong> • <strong>Conjugate Multiplication 共轭相乘</strong></p>
+</div>
+<h2 id="the-squeeze-theorem">The Squeeze Theorem</h2>
+<p>The Squeeze Theorem allows us to find the limit of a "difficult" function by trapping it between two "easier" functions that share the same limit at a specific point.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：The Squeeze Theorem</p>
+<p>Suppose <span class="arithmatex">\(g(x) \leq f(x) \leq h(x)\)</span> for all <span class="arithmatex">\(x\)</span> in an open interval containing <span class="arithmatex">\(c\)</span>, except possibly at <span class="arithmatex">\(c\)</span> itself. </p>
+<p>If:</p>
+<div class="arithmatex">\[ \lim_{x \to c} g(x) = L \quad \text{and} \quad \lim_{x \to c} h(x) = L \]</div>
+<p>Then:</p>
+<div class="arithmatex">\[ \lim_{x \to c} f(x) = L \]</div>
+</div>
+<hr />
+<h2 id="visualizing-the-squeeze">Visualizing the Squeeze</h2>
+<p>In the graph below, notice how <span class="arithmatex">\(f(x) = x^2 \sin(1/x)\)</span> (in blue) is "squeezed" by <span class="arithmatex">\(h(x) = x^2\)</span> and <span class="arithmatex">\(g(x) = -x^2\)</span> as <span class="arithmatex">\(x \to 0\)</span>.</p>
+<div id="box_squeeze" style="width:100%; height:400px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_squeeze', {
+      boundingbox: [-1, 1.2, 1, -1.2],
+      functions: [
+          { expr: 'x^2', domain: [-2, 2], color: '#ff7f0e' },
+          { expr: '-x^2', domain: [-2, 2], color: '#2ca02c' },
+          { expr: 'x^2 * sin(10/x)', domain: [-2, 2], color: '#1f77b4' }
+      ]
+  });
+</script>
 
+<p>Because <span class="arithmatex">\(\lim\limits_{x \to 0} (-x^2) = 0\)</span> and <span class="arithmatex">\(\lim\limits_{x \to 0} (x^2) = 0\)</span>, the function in the middle must also have a limit of <span class="arithmatex">\(0\)</span>.</p>
+<h2 id="proof-1-lim_x-to-0-fracsin-xx-1">Proof 1: <span class="arithmatex">\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</span></h2>
+<p>This limit is the "Holy Grail" of trigonometric limits. We cannot use direct substitution (gives <span class="arithmatex">\(0/0\)</span>) or simple algebra. We must use a <strong>geometric squeeze</strong>.</p>
+<h3 id="1-the-setup">1. The Setup</h3>
+<p>Consider a unit circle (radius <span class="arithmatex">\(r=1\)</span>) and an angle <span class="arithmatex">\(x\)</span> in the first quadrant (<span class="arithmatex">\(0 &lt; x &lt; \pi/2\)</span>). We compare the areas of three distinct regions:</p>
+<ol>
+<li>
+<p><strong>Inner Triangle:</strong> A triangle with base <span class="arithmatex">\(1\)</span> and height <span class="arithmatex">\(\sin x\)</span>. Area <span class="arithmatex">\(= \frac{1}{2}(1)(\sin x) \cos x = \frac{1}{2} \sin x \cos x\)</span>.</p>
+</li>
+<li>
+<p><strong>Circular Sector:</strong> A slice of the circle with angle <span class="arithmatex">\(x\)</span>. Area <span class="arithmatex">\(= \frac{1}{2}r^2\theta = \frac{1}{2}(1)^2 x = \frac{1}{2}x\)</span>.</p>
+</li>
+<li>
+<p><strong>Outer Triangle:</strong> A larger triangle with base <span class="arithmatex">\(1\)</span> and height <span class="arithmatex">\(\tan x\)</span>. Area <span class="arithmatex">\(= \frac{1}{2}(1)(\tan x) = \frac{1}{2} \tan x\)</span>.</p>
+</li>
+</ol>
+<h3 id="2-the-inequality">2. The Inequality</h3>
+<p>Visually, the Inner Triangle <span class="arithmatex">\(\subset\)</span> Circular Sector <span class="arithmatex">\(\subset\)</span> Outer Triangle. Thus:</p>
+<div class="arithmatex">\[ \frac{1}{2} \sin x \cos x &lt; \frac{1}{2} x &lt; \frac{1}{2} \tan x \]</div>
+<p>Multiply everything by <span class="arithmatex">\(2\)</span> and divide by <span class="arithmatex">\(\sin x\)</span> (which is positive for <span class="arithmatex">\(x \to 0^+\)</span>):</p>
+<div class="arithmatex">\[ \cos x &lt; \frac{x}{\sin x} &lt; \frac{1}{\cos x} \]</div>
+<h3 id="3-the-squeeze">3. The Squeeze</h3>
+<p>Taking the reciprocal (which flips the inequality signs):</p>
+<div class="arithmatex">\[ \frac{1}{\cos x} &gt; \frac{\sin x}{x} &gt; \cos x \]</div>
+<p>As <span class="arithmatex">\(x \to 0\)</span>:</p>
+<div class="arithmatex">\[ \lim_{x \to 0} \cos x = 1 \quad \text{and} \quad \lim_{x \to 0} \frac{1}{\cos x} = 1 \]</div>
+<p>By the <strong>Squeeze Theorem</strong>, the middle term must also approach 1.</p>
+<hr />
+<h2 id="proof-2-lim_x-to-0-frac1-cos-xx-0">Proof 2: <span class="arithmatex">\(\lim_{x \to 0} \frac{1 - \cos x}{x} = 0\)</span></h2>
+<p>Now that we know <span class="arithmatex">\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</span>, we can use algebra and the conjugate to prove this second special limit.</p>
+<ol>
+<li>
+<p><strong>Multiply by the Conjugate:</strong>
+    Multiply the numerator and denominator by <span class="arithmatex">\((1 + \cos x)\)</span>.</p>
+<div class="arithmatex">\[ \frac{1 - \cos x}{x} \cdot \frac{1 + \cos x}{1 + \cos x} = \frac{1 - \cos^2 x}{x(1 + \cos x)} \]</div>
+</li>
+<li>
+<p><strong>Apply Pythagorean Identity:</strong>
+    Recall that <span class="arithmatex">\(1 - \cos^2 x = \sin^2 x\)</span>.</p>
+<div class="arithmatex">\[ \frac{\sin^2 x}{x(1 + \cos x)} = \left( \frac{\sin x}{x} \right) \cdot \left( \frac{\sin x}{1 + \cos x} \right) \]</div>
+</li>
+<li>
+<p><strong>Evaluate the Limits:</strong>
+    Apply the limit as <span class="arithmatex">\(x \to 0\)</span> to both parts:</p>
+<div class="arithmatex">\[ \lim_{x \to 0} \frac{\sin x}{x} = 1 \]</div>
+<div class="arithmatex">\[ \lim_{x \to 0} \frac{\sin x}{1 + \cos x} = \frac{0}{1 + 1} = 0 \]</div>
+</li>
+<li>
+<p><strong>Result:</strong>
+    <span class="arithmatex">\(1 \cdot 0 = 0\)</span>.</p>
+</li>
+</ol>
+<hr />
+<h2 id="summary-of-special-limits">Summary of Special Limits</h2>
+<div class="admonition info">
+<p class="admonition-title">Important Limits to Memorize</p>
+<p>You will use these repeatedly to solve complex trigonometric limits:</p>
+<ol>
+<li>
+<div class="arithmatex">\[ \lim_{x \to 0} \frac{\sin x}{x} = 1 \]</div>
+</li>
+<li>
+<div class="arithmatex">\[ \lim_{x \to 0} \frac{1 - \cos x}{x} = 0 \]</div>
+</li>
+</ol>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
 
+<div id="quiz1-8-1"></div>
+<script>
+  renderMCQ('quiz1-8-1', {
+    title: 'Applying the Geometric Proof',
+    question: 'In the geometric proof for <span class="arithmatex">\\( \\frac{\\sin x}{x} \\)</span>, we established the inequality <span class="arithmatex">\\( \\cos x < \\frac{\\sin x}{x} < \\frac{1}{\\cos x} \\)</span>. If <span class="arithmatex">\\( x = 0.1 \\)</span> radians, which of the following is true?',
+    options: [
+      'A. <span class="arithmatex">\\( \\frac{\\sin x}{x} \\)</span> is exactly 1',
+      'B. <span class="arithmatex">\\( 0.995 < \\frac{\\sin x}{x} < 1.005 \\)</span>',
+      'C. <span class="arithmatex">\\( \\frac{\\sin x}{x} \\)</span> is greater than 1',
+      'D. <span class="arithmatex">\\( \\frac{\\sin x}{x} \\)</span> is less than <span class="arithmatex">\\( \\cos x \\)</span>'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! Since <span class='arithmatex'>\\( \\cos(0.1) \\approx 0.995 \\)</span> and <span class='arithmatex'>\\( 1/\\cos(0.1) \\approx 1.005 \\)</span>, the value of <span class='arithmatex'>\\( \\sin(0.1)/0.1 \\)</span> must be trapped between them.",
+      wrong: "The Squeeze Theorem shows that the function is trapped between the two values. Use the inequality we derived to see the range."
+    }
+  });
+</script>
+
+<div id="quiz1-8-2"></div>
+<script>
+  renderMCQ('quiz1-8-2', {
+    title: 'Manipulating Special Limits',
+    question: 'Evaluate <span class="arithmatex">\\( \\lim\\limits_{x \\to 0} \\frac{\\sin(5x)}{x} \\)</span>.',
+    options: [
+      'A. <span class="arithmatex">\\( 1 \\)</span>',
+      'B. <span class="arithmatex">\\( 0 \\)</span>',
+      'C. <span class="arithmatex">\\( 5 \\)</span>',
+      'D. <span class="arithmatex">\\( 1/5 \\)</span>'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! Let <span class='arithmatex'>\\( \\theta = 5x \\)</span>. To use the property, we need the denominator to be <span class='arithmatex'>\\( 5x \\)</span>. Multiply by <span class='arithmatex'>\\( 5/5 \\)</span> to get <span class='arithmatex'>\\( 5 \\cdot \\frac{\\sin(5x)}{5x} = 5 \\cdot 1 = 5 \\)</span>.",
+      wrong: "The rule <span class='arithmatex'>\\( \\frac{\\sin \\theta}{\\theta} \\to 1 \\)</span> only works if the inside of the sine and the denominator are identical. How can you make the denominator match 5x?"
+    }
+  });
+</script>
 
 
 

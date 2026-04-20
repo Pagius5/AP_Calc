@@ -19,7 +19,7 @@
     
     
       
-        <title>1 16 - AP Calculus Notes</title>
+        <title>1.16 Working with the Intermediate Value Theorem (IVT) - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#116-working-with-the-intermediate-value-theorem-ivt" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 16
+              1.16 Working with the Intermediate Value Theorem (IVT)
             
           </span>
         </div>
@@ -784,6 +789,122 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-intermediate-value-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Intermediate Value Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-checklist-for-ivt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Checklist for IVT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Checklist for IVT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-finding-a-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Finding a Root
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-continuity-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Continuity Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-application-proving-intersections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Application: Proving Intersections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deep Application: Proving Intersections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-strategy-creating-a-difference-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Strategy: Creating a Difference Function
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Strategy: Creating a Difference Function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +924,154 @@
   
 
 
-  <h1>1 16</h1>
+<h1 id="116-working-with-the-intermediate-value-theorem-ivt">1.16 Working with the Intermediate Value Theorem (IVT)</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Existence Theorem 存在性定理</strong> • <strong>Closed Interval 闭区间</strong> </p>
+<p><strong>Continuity Requirement 连续性要求</strong> • <strong>Guaranteed Value 保证值</strong></p>
+</div>
+<h2 id="the-intermediate-value-theorem">The Intermediate Value Theorem</h2>
+<p>The IVT states that if a continuous function moves from one <span class="arithmatex">\(y\)</span>-value to another, it must pass through every possible <span class="arithmatex">\(y\)</span>-value in between.</p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：The Intermediate Value Theorem (IVT)</p>
+<p>If <span class="arithmatex">\(f\)</span> is a <strong>continuous</strong> function on the <strong>closed interval</strong> <span class="arithmatex">\([a, b]\)</span> and <span class="arithmatex">\(d\)</span> is a number between <span class="arithmatex">\(f(a)\)</span> and <span class="arithmatex">\(f(b)\)</span>, then the IVT guarantees that there is <strong>at least one</strong> number <span class="arithmatex">\(c\)</span> between <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> such that:</p>
+<div class="arithmatex">\[ f(c) = d \]</div>
+</div>
+<hr />
+<h2 id="the-checklist-for-ivt">The Checklist for IVT</h2>
+<p>To apply the IVT on the AP Exam, you must verify these two conditions:</p>
+<ol>
+<li>
+<p><strong>Continuity:</strong> The function must be continuous on the closed interval <span class="arithmatex">\([a, b]\)</span>. If there is a hole, jump, or asymptote in the interval, the IVT does not apply.</p>
+</li>
+<li>
+<p><strong>Interval:</strong> The target value <span class="arithmatex">\(d\)</span> must actually lie between the function's values at the endpoints (<span class="arithmatex">\(f(a) &lt; d &lt; f(b)\)</span> or <span class="arithmatex">\(f(b) &lt; d &lt; f(a)\)</span>).</p>
+</li>
+</ol>
+<h3 id="example-finding-a-root">Example: Finding a Root</h3>
+<p>Does the function <span class="arithmatex">\(f(x) = x^2 - 2\)</span> have a zero in the interval <span class="arithmatex">\([0, 2]\)</span>?</p>
+<ul>
+<li><span class="arithmatex">\(f(0) = -2\)</span></li>
+<li><span class="arithmatex">\(f(2) = 2\)</span></li>
+<li>Since <span class="arithmatex">\(f(x)\)</span> is a polynomial (continuous) and <span class="arithmatex">\(0\)</span> is between <span class="arithmatex">\(-2\)</span> and <span class="arithmatex">\(2\)</span>, the IVT guarantees there is at least one <span class="arithmatex">\(c\)</span> in <span class="arithmatex">\((0, 2)\)</span> such that <span class="arithmatex">\(f(c) = 0\)</span>.</li>
+</ul>
+<div id="box_ivt" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_ivt', {
+      boundingbox: [-1, 3, 3, -3],
+      functions: [
+          {expr: 'x^2 - 2', domain: [0, 2], color: '#1f77b4'},
+          {expr: '0', domain: [-1, 3], color: '#d62728'} // The line y = 0
+      ],
+      points: [
+          [0, -2, true],
+          [2, 2, true],
+          [1.414, 0, true] // The guaranteed point c (sqrt 2)
+      ]
+  });
+</script>
 
+<hr />
+<h2 id="why-continuity-matters">Why Continuity Matters</h2>
+<p>If a function is not continuous, it can "jump" over the target value <span class="arithmatex">\(d\)</span>. </p>
+<div class="admonition info">
+<p class="admonition-title">Important Note</p>
+<p>The IVT only tells you that a value <strong>exists</strong>. It does not tell you:</p>
+<ul>
+<li>How many such values exist (there could be 1, 3, or 100).</li>
+<li>The exact <span class="arithmatex">\(x\)</span>-coordinate of <span class="arithmatex">\(c\)</span>.</li>
+<li>The formula for the function.</li>
+</ul>
+</div>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: Real-World IVT</p>
+<p>Think of the IVT like a person walking up a staircase versus walking up a ramp. </p>
+<p>If you are on a <strong>staircase</strong> (discontinuous), you can move from the 1st floor to the 2nd floor without ever having your feet exactly 1.5 meters above the ground. </p>
+<p>If you are on a <strong>ramp</strong> (continuous), you cannot get to the 2nd floor without passing through every single height in between.</p>
+</div>
+<hr />
+<h2 id="deep-application-proving-intersections">Deep Application: Proving Intersections</h2>
+<p>In many AP problems, you aren't just looking for where a function equals a number; you are asked to prove that two functions, <span class="arithmatex">\(f(x)\)</span> and <span class="arithmatex">\(g(x)\)</span>, <strong>cross each other</strong>.</p>
+<h3 id="the-strategy-creating-a-difference-function">The Strategy: Creating a Difference Function</h3>
+<p>To prove <span class="arithmatex">\(f(x) = g(x)\)</span> at some point, we define a new function:
+$$ h(x) = f(x) - g(x) $$
+If we can prove that <span class="arithmatex">\(h(c) = 0\)</span> using the IVT, then <span class="arithmatex">\(f(c) - g(c) = 0\)</span>, which means <span class="arithmatex">\(f(c) = g(c)\)</span>.</p>
+<h4 id="example">Example:</h4>
+<p>Prove that <span class="arithmatex">\(f(x) = x\)</span> and <span class="arithmatex">\(g(x) = \cos(x)\)</span> intersect at least once in the interval <span class="arithmatex">\([0, \pi/2]\)</span>.</p>
+<ol>
+<li><strong>Define <span class="arithmatex">\(h(x)\)</span>:</strong> Let <span class="arithmatex">\(h(x) = x - \cos(x)\)</span>. </li>
+<li><strong>Check Continuity:</strong> <span class="arithmatex">\(h(x)\)</span> is continuous because it is the difference of a linear and a trig function.</li>
+<li><strong>Check Endpoints:</strong><ul>
+<li><span class="arithmatex">\(h(0) = 0 - \cos(0) = -1\)</span> (Negative)</li>
+<li><span class="arithmatex">\(h(\pi/2) = \pi/2 - \cos(\pi/2) = \pi/2 \approx 1.57\)</span> (Positive)</li>
+</ul>
+</li>
+<li><strong>Conclusion:</strong> Since <span class="arithmatex">\(h(x)\)</span> is continuous and <span class="arithmatex">\(0\)</span> lies between <span class="arithmatex">\(-1\)</span> and <span class="arithmatex">\(1.57\)</span>, by the <strong>IVT</strong>, there must be at least one <span class="arithmatex">\(c\)</span> in <span class="arithmatex">\((0, \pi/2)\)</span> such that <span class="arithmatex">\(h(c) = 0\)</span>, meaning <span class="arithmatex">\(x = \cos(x)\)</span>.</li>
+</ol>
+<div id="box_ivt_intersect" style="width:100%; height:300px; border-radius: 8px; border: 1px solid #ddd;"></div>
+<script src="/javascripts/math_graph.js"></script>
+<script>
+  renderMathGraph('box_ivt_intersect', {
+      boundingbox: [-0.5, 2, 2, -0.5],
+      functions: [
+          {expr: 'x', domain: [0, 1.6], color: '#1f77b4'},     // f(x) = x
+          {expr: 'cos(x)', domain: [0, 1.6], color: '#d62728'} // g(x) = cos(x)
+      ],
+      points: [
+          [0.739, 0.739, true] // The intersection point
+      ]
+  });
+</script>
 
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: The 'Wobbly Table' Theorem</p>
+<p>Did you know the IVT can be used to fix a wobbly table? If you have a four-legged table on uneven ground, the IVT guarantees that if you rotate the table, there is at least one orientation (less than 90 degrees of rotation) where all four legs will touch the ground simultaneously. </p>
+<p>The "wobble" is a continuous function of the angle of rotation. If the wobble is positive in one orientation and negative after turning it 90 degrees, it <strong>must</strong> be zero at some point in between!</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
+
+<div id="quiz1-16-1"></div>
+<script>
+  renderMCQ('quiz1-16-1', {
+    title: 'Condition Check',
+    question: 'A function <span class="arithmatex">\\( f \\)</span> is defined on <span class="arithmatex">\\( [1, 5] \\)</span> with <span class="arithmatex">\\( f(1) = 10 \\)</span> and <span class="arithmatex">\\( f(5) = 20 \\)</span>. Why might the IVT fail to guarantee a value <span class="arithmatex">\\( c \\)</span> such that <span class="arithmatex">\\( f(c) = 15 \\)</span>?',
+    options: [
+      'A. Because 15 is between 10 and 20.',
+      'B. Because the function might not be continuous on <span class="arithmatex">\\( [1, 5] \\)</span>.',
+      'C. Because the interval is too wide.',
+      'D. The IVT always applies to any function.'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! The most critical requirement for the IVT is that the function must be continuous. If there is a discontinuity, the function could jump from 14 to 16, skipping 15 entirely.",
+      wrong: "Look at the requirements for the IVT. What is the 'if' part of the theorem?"
+    }
+  });
+</script>
+
+<div id="quiz1-16-2"></div>
+<script>
+  renderMCQ('quiz1-16-2', {
+    title: 'Applying IVT to Tables',
+    question: 'Given the table below for a continuous function <span class="arithmatex">\\( g(x) \\)</span>, what is the minimum number of zeros <span class="arithmatex">\\( g(x) \\)</span> must have on the interval <span class="arithmatex">\\( [0, 10] \\)</span>?<br><br><div style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; text-align: center; border: 1px solid #ddd;"><tr style="background-color: #f8f9fa;"><th style="padding: 10px; border: 1px solid #ddd;">x</th><td style="padding: 10px; border: 1px solid #ddd;">0</td><td style="padding: 10px; border: 1px solid #ddd;">3</td><td style="padding: 10px; border: 1px solid #ddd;">7</td><td style="padding: 10px; border: 1px solid #ddd;">10</td></tr><tr><th style="padding: 10px; border: 1px solid #ddd;">g(x)</th><td style="padding: 10px; border: 1px solid #ddd;">5</td><td style="padding: 10px; border: 1px solid #ddd;">-2</td><td style="padding: 10px; border: 1px solid #ddd;">1</td><td style="padding: 10px; border: 1px solid #ddd;">4</td></tr></table></div>',
+    options: [
+      'A. 0',
+      'B. 1',
+      'C. 2',
+      'D. 3'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! <span class='arithmatex'>\\( g(x) \\)</span> changes sign between <span class='arithmatex'>\\( x=0 \\)</span> and <span class='arithmatex'>\\( x=3 \\)</span> (from 5 to -2), which guarantees at least one zero. It changes sign again between <span class='arithmatex'>\\( x=3 \\)</span> and <span class='arithmatex'>\\( x=7 \\)</span> (from -2 to 1), guaranteeing a second zero. Total = 2.",
+      wrong: "Count how many times the function values (g(x)) change from positive to negative or negative to positive. Each sign change in a continuous function guarantees a zero."
+    }
+  });
+</script>
 
 
 

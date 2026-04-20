@@ -19,7 +19,7 @@
     
     
       
-        <title>1 7 - AP Calculus Notes</title>
+        <title>1.7 Selecting Procedures for Determining Limits - AP Calculus Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#17-selecting-procedures-for-determining-limits" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 7
+              1.7 Selecting Procedures for Determining Limits
             
           </span>
         </div>
@@ -784,6 +789,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-limit-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Limit Roadmap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-selection-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy Selection Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-challenging-case-complex-rationalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Challenging Case: Complex Rationalization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -803,9 +862,121 @@
   
 
 
-  <h1>1 7</h1>
+<h1 id="17-selecting-procedures-for-determining-limits">1.7 Selecting Procedures for Determining Limits</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Keywords</p>
+<p><strong>Decision Matrix 决策矩阵</strong> • <strong>Direct Substitution 直接代入</strong> </p>
+<p><strong>Indeterminate Form 不定式</strong> • <strong>Simplification 简化</strong> • <strong>Piecewise Strategy 分段策略</strong></p>
+</div>
+<h2 id="the-limit-roadmap">The Limit Roadmap</h2>
+<p>When faced with a limit problem, you should follow a logical sequence of procedures to find the solution efficiently. </p>
+<div class="admonition info">
+<p class="admonition-title">核心要点：极限求解决策流 (The Decision Flow)</p>
+<ol>
+<li>
+<p><strong>Step 1: Direct Substitution.</strong> Always start here. If <span class="arithmatex">\(f(c)\)</span> results in a real number, you are finished.</p>
+</li>
+<li>
+<p><strong>Step 2: Check for Indeterminate Form (<span class="arithmatex">\(\frac{0}{0}\)</span>).</strong> If substitution results in zero over zero, you must use algebraic manipulation (Factoring, Conjugates, or Trig Identities) to simplify the expression.</p>
+</li>
+<li>
+<p><strong>Step 3: Check for Infinite Behavior (<span class="arithmatex">\(\frac{k}{0}\)</span>).</strong> If the numerator is a non-zero constant <span class="arithmatex">\(k\)</span> and the denominator is <span class="arithmatex">\(0\)</span>, the limit is likely <span class="arithmatex">\(\infty\)</span>, <span class="arithmatex">\(-\infty\)</span>, or DNE. Check the one-sided limits.</p>
+</li>
+<li>
+<p><strong>Step 4: Analyze Graphs or Tables.</strong> If the function is too complex for algebra or is defined piecewise, use numerical estimation or visual inspection.</p>
+</li>
+</ol>
+</div>
+<hr />
+<h2 id="strategy-selection-table">Strategy Selection Table</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">If the function looks like...</th>
+<th style="text-align: left;">Try this procedure...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Polynomials / Radicals (Defined)</td>
+<td style="text-align: left;"><strong>Direct Substitution</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Rational functions (<span class="arithmatex">\(\frac{0}{0}\)</span>)</td>
+<td style="text-align: left;"><strong>Factoring</strong> or <strong>Long Division</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Square Roots (<span class="arithmatex">\(\sqrt{x} \dots\)</span>)</td>
+<td style="text-align: left;"><strong>Rationalizing</strong> (Multiply by Conjugate)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Piecewise functions at the "break"</td>
+<td style="text-align: left;"><strong>One-Sided Limits</strong> (Left vs. Right)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Complex Fractions</td>
+<td style="text-align: left;"><strong>Find a Common Denominator</strong> to simplify</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="a-challenging-case-complex-rationalization">A Challenging Case: Complex Rationalization</h2>
+<p>Sometimes, you might encounter a limit that requires multiple steps or "double" manipulation.</p>
+<p><strong>Example:</strong> Evaluate <span class="arithmatex">\(\lim\limits_{x \to 0} \frac{\frac{1}{x+3} - \frac{1}{3}}{x}\)</span></p>
+<p>First, direct substitution gives <span class="arithmatex">\(\frac{1/3 - 1/3}{0} = \frac{0}{0}\)</span>. We must simplify the complex fraction by finding a common denominator in the numerator:</p>
+<div class="arithmatex">\[ \frac{1}{x+3} - \frac{1}{3} = \frac{3 - (x+3)}{3(x+3)} = \frac{-x}{3(x+3)} \]</div>
+<p>Now, substitute this back into the original limit:</p>
+<div class="arithmatex">\[ \lim_{x \to 0} \frac{\frac{-x}{3(x+3)}}{x} = \lim_{x \to 0} \frac{-x}{3x(x+3)} = \lim_{x \to 0} \frac{-1}{3(x+3)} \]</div>
+<p>Finally, use direct substitution: <span class="arithmatex">\(\frac{-1}{3(0+3)} = -\frac{1}{9}\)</span>.</p>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Extension: The Absolute Value Trap</p>
+<p>Be careful with limits involving absolute values, such as <span class="arithmatex">\(\lim\limits_{x \to 2} \frac{|x-2|}{x-2}\)</span>. </p>
+<p>If you approach from the right (<span class="arithmatex">\(x &gt; 2\)</span>), the value is <span class="arithmatex">\(\frac{x-2}{x-2} = 1\)</span>. 
+If you approach from the left (<span class="arithmatex">\(x &lt; 2\)</span>), the value is <span class="arithmatex">\(\frac{-(x-2)}{x-2} = -1\)</span>. 
+Because the one-sided limits do not match (<span class="arithmatex">\(1 \neq -1\)</span>), the limit <strong>Does Not Exist</strong>. This creates a "Jump Discontinuity" that algebra alone might hide if you aren't careful!</p>
+</div>
+<hr />
+<h2 id="quiz">Quiz</h2>
+<script src="/javascripts/mcq.js"></script>
 
+<div id="quiz1-7-1"></div>
+<script>
+  renderMCQ('quiz1-7-1', {
+    title: 'Selecting the Procedure',
+    question: 'Which method would be most appropriate to evaluate <span class="arithmatex">\\( \\lim\\limits_{x \\to 4} \\frac{\\sqrt{x}-2}{x-4} \\)</span>?',
+    options: [
+      'A. Direct Substitution only',
+      'B. Factor the denominator and cancel terms',
+      'C. Rationalize the numerator using the conjugate <span class="arithmatex">\\( \\sqrt{x}+2 \\)</span>',
+      'D. The limit is automatically DNE because the denominator is zero'
+    ],
+    correctIndex: 2, 
+    feedback: {
+      correct: "Correct! Since substitution gives 0/0 and there is a square root, multiplying by the conjugate is the standard procedure.",
+      wrong: "While factoring the denominator is actually possible here (treating it as a difference of squares), the most common and standard procedure for radicals is rationalization."
+    }
+  });
+</script>
 
+<div id="quiz1-7-2"></div>
+<script>
+  renderMCQ('quiz1-7-2', {
+    title: 'Challenge: Piecewise Selection',
+    question: 'Let <span class="arithmatex">\\( f(x) = \\begin{cases} x^2+1, & x < 1 \\\\ 3, & x = 1 \\\\ 2x, & x > 1 \\end{cases} \\)</span>. <br> What is <span class="arithmatex">\\( \\lim\\limits_{x \\to 1} f(x) \\)</span>?',
+    options: [
+      'A. <span class="arithmatex">\\( 1 \\)</span>',
+      'B. <span class="arithmatex">\\( 2 \\)</span>',
+      'C. <span class="arithmatex">\\( 3 \\)</span>',
+      'D. Does Not Exist (DNE)'
+    ],
+    correctIndex: 1, 
+    feedback: {
+      correct: "Correct! We check one-sided limits: <br> Left-hand: <span class='arithmatex'>\\( 1^2+1 = 2 \\)</span> <br> Right-hand: <span class='arithmatex'>\\( 2(1) = 2 \\)</span>. <br> Since both sides equal 2, the limit is 2. Note: <span class='arithmatex'>\\( f(1)=3 \\)</span> is a hole/point and does not affect the limit.",
+      wrong: "Remember to check the limit from the left and the right. Does the value of the function at exactly x=1 matter for the limit?"
+    }
+  });
+</script>
 
 
 
